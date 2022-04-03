@@ -2,7 +2,7 @@ export default {
   ssr: false,
   target: 'static',
   generate: {
-    dir: 'mst-ghi',
+    dir: 'docs',
   },
   head: {
     title: 'Mostafa Gholami (mst-ghi)',

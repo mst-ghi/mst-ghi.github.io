@@ -29,7 +29,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/tailwindcss',
   ],
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/svg-sprite'],
   axios: {
     baseURL: '/',
   },

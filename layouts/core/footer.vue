@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-100 mt-24 py-4">
+  <div class="fixed bottom-0 w-full bg-slate-100 mt-24 py-2">
     <div class="flex flex-col container">
       <div class="flex flex-row my-2 space-x-3 justify-center items-center">
         <a href="https://www.linkedin.com/in/mst-ghi/" target="_blank">
@@ -27,7 +27,7 @@
         </a>
       </div>
       <div
-        class="flex flex-row text-gray-500 font-medium text-xs py-2 justify-center items-center"
+        class="flex flex-row text-gray-500 font-medium text-xs pb-2 justify-center items-center"
       >
         <p>@{{ new Date().getFullYear() }}, Designed and Developed with 💕</p>
       </div>

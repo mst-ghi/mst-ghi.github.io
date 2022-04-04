@@ -1,13 +1,10 @@
 <template>
-  <kinesis-container :perspective="3000" class="flex flex-col w-full pt-24">
+  <div class="flex flex-col w-full pt-28">
     <div class="grid grid-cols-2">
       <div class="col-span-2 md:col-span-1 w-full md:pr-20">
-        <kinesis-element
-          :strength="10"
-          class="flex justify-center md:justify-end"
-        >
+        <div class="flex justify-center md:justify-end">
           <svg-icon name="hero" class="hero--svg" />
-        </kinesis-element>
+        </div>
       </div>
 
       <div class="col-span-2 md:col-span-1 flex-col pt-10 md:pt-32">
@@ -39,7 +36,7 @@
         </vue-typed-js>
       </div>
     </div>
-  </kinesis-container>
+  </div>
 </template>
 
 <script lang="ts">

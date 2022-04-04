@@ -1,10 +1,45 @@
 <template>
-  <div class="flex flex-col items-center">
-    <svg-icon name="hero" class="h-96" />
+  <kinesis-container :perspective="3000" class="flex flex-col w-full pt-24">
+    <div class="grid grid-cols-2">
+      <div class="col-span-2 md:col-span-1 w-full md:pr-20">
+        <kinesis-element
+          :strength="10"
+          class="flex justify-center md:justify-end"
+        >
+          <svg-icon name="hero" class="hero--svg" />
+        </kinesis-element>
+      </div>
 
-    <h1 class="text-3xl text-gray-700 mb-2">Hi, I'm Mostafa Gholami</h1>
-    <h2 class="text-xl text-gray-600 mb-5">Back-end and Front-end Developer</h2>
-  </div>
+      <div class="col-span-2 md:col-span-1 flex-col pt-10 md:pt-32">
+        <h1 class="text-3xl text-gray-700 mb-4">
+          Hi, I'm <strong>Mostafa Gholami</strong>
+        </h1>
+        <h2 class="text-xl text-gray-600 mb-2">
+          Back-end and Front-end Developer.
+        </h2>
+        <vue-typed-js
+          :strings="[
+            'Nodejs',
+            'Php',
+            'Reactjs',
+            'Vuejs',
+            'Nestjs',
+            'Laravel',
+            'Nextjs',
+            'Nuxtjs',
+          ]"
+          :loop="true"
+          :typeSpeed="50"
+          :backSpeed="20"
+          :backDelay="2000"
+        >
+          <h2 class="text-xl text-gray-600 mb-4">
+            <strong class="typing"></strong>. +6 Year of Experience.
+          </h2>
+        </vue-typed-js>
+      </div>
+    </div>
+  </kinesis-container>
 </template>
 
 <script lang="ts">
@@ -16,3 +51,10 @@ import { Component, Vue } from '@/decorators'
 })
 export default class IndexPageComponent extends Vue {}
 </script>
+
+<style>
+.hero--svg {
+  height: 340px;
+  width: auto;
+}
+</style>

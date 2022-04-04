@@ -22,7 +22,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   css: ['~/assets/css/app.css'],
-  plugins: [],
+  plugins: ['~/plugins/packages', '~/plugins/icons'],
   components: true,
   buildModules: [
     '@nuxt/typescript-build',
@@ -44,6 +44,7 @@ export default {
   },
   build: {
     publicPath: `_mst/`,
-    watch: ['decorators/*.ts'],
+    watch: ['decorators/*.ts', 'plugins/*.ts'],
+    transpile: [/^vue-awesome/],
   },
 }

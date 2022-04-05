@@ -38,11 +38,7 @@ import { Component, Vue } from '@/decorators'
   scrollToTop: true,
   transition: 'default',
 })
-export default class IndexPageComponent extends Vue {
-  mounted() {
-    console.log(this.$appData)
-  }
-}
+export default class IndexPageComponent extends Vue {}
 </script>
 
 <style>

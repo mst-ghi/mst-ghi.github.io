@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col relative overflow-x-hidden">
-    <stacks-logo />
     <div class="flex w-full h-screen container">
       <Nuxt />
     </div>

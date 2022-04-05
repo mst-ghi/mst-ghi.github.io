@@ -23,7 +23,7 @@
               Home
             </nuxt-link>
           </li>
-          <li>
+          <!-- <li>
             <nuxt-link
               to="/laravel"
               exact
@@ -31,7 +31,7 @@
             >
               Laravel
             </nuxt-link>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

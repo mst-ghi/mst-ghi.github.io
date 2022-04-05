@@ -11,11 +11,7 @@ import { Component, Vue } from '@/decorators'
   scrollToTop: true,
   transition: 'default',
 })
-export default class StackPageComponent extends Vue {
-  mounted() {
-    console.log(this.$route.params.stack)
-  }
-}
+export default class StackPageComponent extends Vue {}
 </script>
 
 <style>

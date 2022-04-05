@@ -1,5 +1,5 @@
 import {
-  Vue,
+  Vue as _Vue,
   Component,
   Prop,
   PropSync,
@@ -15,6 +15,10 @@ import {
   VModel,
   mixins as Mixins,
 } from 'nuxt-property-decorator'
+
+class Vue extends _Vue {
+  [x: string]: any
+}
 
 export {
   Vue,

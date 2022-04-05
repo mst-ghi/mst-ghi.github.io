@@ -1,6 +1,7 @@
 <template>
-  <div class="flex flex-col relative overflow-x-hidden">
-    <div class="flex w-full h-screen container">
+  <div class="flex flex-col relative">
+    <navbar />
+    <div class="flex container">
       <Nuxt />
     </div>
     <main-footer />
@@ -9,14 +10,14 @@
 
 <script lang="ts">
 import { Component, Vue } from '@/decorators'
+import Navbar from './core/navbar.vue'
 import MainFooter from './core/footer.vue'
-import StacksLogo from './core/stacks-logo.vue'
 
 @Component({
   scrollToTop: true,
   transition: 'default',
   components: {
-    StacksLogo,
+    Navbar,
     MainFooter,
   },
 })

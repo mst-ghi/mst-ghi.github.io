@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col relative">
+  <div class="flex flex-col relative justify-between h-screen">
     <navbar />
     <div class="flex container">
       <Nuxt />

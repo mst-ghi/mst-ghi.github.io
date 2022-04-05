@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 w-full bg-slate-100 mt-24 hidden md:block">
+  <div class="fixed bottom-0 w-full mt-24">
     <div class="flex flex-col container">
       <div class="flex flex-row my-2 space-x-3 justify-center items-center">
         <a href="https://www.linkedin.com/in/mst-ghi/" target="_blank">

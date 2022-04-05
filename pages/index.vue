@@ -14,17 +14,35 @@
         <h2 class="text-xl text-gray-600 mb-2">
           {{ $appData.headline }}
         </h2>
+        <h2 class="text-xl text-gray-600 mb-4">
+          +{{ $appData.experienceYear }}
+          Year of Experience
+        </h2>
         <vue-typed-js
           :strings="$appData.headlineStacks"
           :loop="true"
           :typeSpeed="50"
           :backSpeed="20"
           :backDelay="2000"
+          class="border-2 rounded-md md:w-1/2 p-1 relative"
         >
-          <h2 class="text-xl text-gray-600 mb-4">
-            <strong class="typing"></strong>. +{{ $appData.experienceYear }}
-            Year of Experience.
-          </h2>
+          <div>
+            <span
+              class="text-gray-500 bg-white text-sm absolute -top-3 left-1 px-1"
+            >
+              Top Specialties:
+            </span>
+            <h2
+              class="text-2xl text-gray-600 ml-1 flex flex-row space-x-2 mt-1"
+            >
+              <v-icon
+                name="brands/stack-exchange"
+                class="fill-gray-500 mt-1"
+                scale="1.5"
+              />
+              <strong class="typing"></strong>
+            </h2>
+          </div>
         </vue-typed-js>
       </div>
     </div>

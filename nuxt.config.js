@@ -1,3 +1,5 @@
+import AppData from './libs/app'
+
 export default {
   ssr: false,
   target: 'static',
@@ -5,7 +7,7 @@ export default {
     dir: 'docs',
   },
   head: {
-    title: 'Mostafa Gholami (mst-ghi)',
+    title: `${AppData.name} (${AppData.nickname})`,
     htmlAttrs: {
       lang: 'en',
     },
@@ -15,7 +17,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: "Mostafa Gholami's website",
+        content: `Mostafa Gholami's website. ${AppData.headline}`,
       },
       { name: 'format-detection', content: 'telephone=no' },
     ],
@@ -46,6 +48,7 @@ export default {
   build: {
     publicPath: `_mst/`,
     watch: ['decorators/*.ts', 'plugins/*.ts', 'libs/*.ts'],
+    ignored: ['.git'],
     transpile: [/^vue-awesome/],
   },
 }

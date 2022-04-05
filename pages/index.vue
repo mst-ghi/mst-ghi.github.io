@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full pt-16">
+  <div class="flex flex-col w-full md:pt-16">
     <div class="grid grid-cols-2">
       <div class="col-span-2 md:col-span-1 w-full md:pr-20">
         <div class="flex justify-center md:justify-end">
@@ -44,6 +44,24 @@
             </h2>
           </div>
         </vue-typed-js>
+      </div>
+    </div>
+
+    <div class="py-8 bg-blue-100 rounded-lg mt-24">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="text-2xl text-gray-700 font-medium">Top Specialties</h2>
+        </div>
+        <div
+          class="flex md:flex-row flex-wrap space-y-2 items-center justify-between"
+        >
+          <svg-icon name="nodejs" class="w-36 pt-28" />
+          <svg-icon name="nestjs" class="w-24" />
+          <svg-icon name="laravel" class="w-24" />
+          <svg-icon name="nextjs" class="w-32" />
+          <svg-icon name="nuxtjs" class="w-32" />
+          <svg-icon name="js" class="w-20 pt-16" />
+        </div>
       </div>
     </div>
   </div>

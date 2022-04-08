@@ -47,23 +47,23 @@
       </div>
     </div>
 
-    <div class="py-8 bg-blue-100 rounded-lg mt-24">
-      <div class="container">
-        <div class="text-center">
-          <h2 class="text-2xl text-gray-700 font-medium">Top Specialties</h2>
-        </div>
-        <div
-          class="flex md:flex-row flex-wrap space-y-2 items-center justify-between"
-        >
-          <svg-icon name="nodejs" class="w-36 pt-28" />
-          <svg-icon name="nestjs" class="w-24" />
-          <svg-icon name="laravel" class="w-24" />
-          <svg-icon name="nextjs" class="w-32" />
-          <svg-icon name="nuxtjs" class="w-32" />
-          <svg-icon name="js" class="w-20 pt-16" />
+    <nuxt-link to="/specialties" exact>
+      <div class="py-8 bg-blue-100 rounded-lg mt-24">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="text-2xl text-gray-700 font-medium">Top Specialties</h2>
+          </div>
+          <div
+            class="flex md:flex-row flex-wrap space-y-2 items-center justify-between md:px-8"
+          >
+            <svg-icon name="nestjs" class="w-24" />
+            <svg-icon name="nextjs" class="w-32" />
+            <svg-icon name="laravel" class="w-24" />
+            <svg-icon name="nuxtjs" class="w-40 md:w-44" />
+          </div>
         </div>
       </div>
-    </div>
+    </nuxt-link>
   </div>
 </template>
 
@@ -71,8 +71,7 @@
 import { Component, Vue } from '@/decorators'
 
 @Component({
-  scrollToTop: true,
-  transition: 'default',
+  transition: 'page',
 })
 export default class IndexPageComponent extends Vue {}
 </script>

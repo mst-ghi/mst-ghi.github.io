@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mt-24">
+  <div class="w-full mt-16 md:mt-24">
     <div class="bg-gray-800 py-4">
       <div class="flex flex-col px-5 md:px-20">
         <div class="flex flex-col md:flex-row pb-4 divide-y-1">
@@ -20,7 +20,7 @@
                 Contact info
               </span>
 
-              <div class="flex flex-col">
+              <div class="flex flex-col space-y-1">
                 <a
                   href="mail::mostafagholamidev@gmail.com"
                   aria-label="mostafagholamidev@gmail.com"
@@ -28,18 +28,19 @@
                 >
                   <v-icon
                     name="regular/envelope"
-                    class="fill-white"
+                    class="fill-white mt-0.5"
                     scale="1"
                   />
                   <span>mostafagholamidev@gmail.com</span>
                 </a>
-
-                <span
+                <a
+                  href="tel:+989365895522"
+                  aria-label="989365895522"
                   class="text-sm font-medium cursor-pointer flex flex-row space-x-1"
                 >
-                  <v-icon name="phone" class="fill-white" scale="1" />
+                  <v-icon name="phone" class="fill-white mt-0.5" scale="0.9" />
                   <span>+989365895522</span>
-                </span>
+                </a>
               </div>
             </div>
 
@@ -93,28 +94,28 @@
 
         <div class="flex flex-row py-2 justify-between items-center">
           <p class="text-white text-xs font-medium">
-            Get source this project here
-            <br class="block md:hidden" />
-            <a
-              href="https://github.com/mst-ghi/mst-ghi.github.io"
-              aria-label="mst-ghi.github.io"
-              class="text-blue-600 text-sm"
-              target="_blank"
-            >
-              <strong class="underline">mst-ghi.github.io</strong>
-            </a>
-          </p>
-
-          <p class="text-white text-xs font-medium">
             Designed and Developed by
             <br class="block md:hidden" />
             <a
               href="https://github.com/mst-ghi"
               aria-label="mst-ghi"
-              class="text-blue-600 text-sm"
+              class="text-sm"
               target="_blank"
             >
-              <strong class="underline">mst-ghi</strong>
+              <strong class="underline">Mostafa Gholami</strong>
+            </a>
+          </p>
+
+          <p class="text-white text-xs font-medium">
+            Get source this project
+            <br class="block md:hidden" />
+            <a
+              href="https://github.com/mst-ghi/mst-ghi.github.io"
+              aria-label="mst-ghi.github.io"
+              class="text-sm"
+              target="_blank"
+            >
+              <strong class="underline">here</strong>
             </a>
           </p>
         </div>

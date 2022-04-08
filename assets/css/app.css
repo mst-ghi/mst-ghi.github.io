@@ -2,7 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 700ms;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
 .divide-y-1 {
   border-top-width: 0px;
   border-bottom-width: 1px;
+}
+
+.stack--title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.stack--subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.stack--desc {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
 }

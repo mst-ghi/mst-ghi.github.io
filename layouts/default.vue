@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col relative justify-between h-screen">
     <navbar />
-    <div class="flex container">
+    <div class="flex container pt-20 md:pt-10">
       <Nuxt />
     </div>
     <main-footer />
@@ -15,7 +15,7 @@ import MainFooter from './core/footer.vue'
 
 @Component({
   scrollToTop: true,
-  transition: 'default',
+  transition: 'page',
   components: {
     Navbar,
     MainFooter,

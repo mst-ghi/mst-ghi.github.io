@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="py-8 bg-blue-100 rounded-lg">
+    <div class="py-8 bg-blue-100 rounded-lg mt-24">
       <nuxt-link to="/specialties" exact>
         <div class="container">
           <div class="text-center">

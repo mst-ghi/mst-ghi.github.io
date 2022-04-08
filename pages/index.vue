@@ -47,8 +47,8 @@
       </div>
     </div>
 
-    <nuxt-link to="/specialties" exact>
-      <div class="py-8 bg-blue-100 rounded-lg mt-24">
+    <div class="py-8 bg-blue-100 rounded-lg">
+      <nuxt-link to="/specialties" exact>
         <div class="container">
           <div class="text-center">
             <h2 class="text-2xl text-gray-700 font-medium">Top Specialties</h2>
@@ -62,8 +62,8 @@
             <svg-icon name="nuxtjs" class="w-40 md:w-44" />
           </div>
         </div>
-      </div>
-    </nuxt-link>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 

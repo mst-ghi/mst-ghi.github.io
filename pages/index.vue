@@ -25,7 +25,7 @@
             :typeSpeed="50"
             :backSpeed="20"
             :backDelay="2000"
-            class="border-2 rounded-md md:w-1/2 p-1 relative"
+            class="border-2 rounded-md md:w-1/2 p-1 relative z-0"
           >
             <div>
               <span

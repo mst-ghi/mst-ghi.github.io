@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col">
-    <div class="flex flex-col w-full">
+    <div class="flex flex-col">
       <div class="grid grid-cols-2">
-        <div class="col-span-2 md:col-span-1 w-full">
+        <div class="col-span-2 md:col-span-1">
           <div class="flex justify-center">
             <svg-icon name="hero" class="hero--svg" />
           </div>

@@ -114,7 +114,7 @@
       </div>
 
       <div class="col-span-6 md:col-span-4 flex flex-col space-y-4">
-        <div class="flex flex-col bg-slate-50 rounded-xl px-4 pt-4">
+        <div class="flex flex-col bg-slate-50 rounded-xl p-4">
           <span class="text-gray-800 font-medium text-xl mb-5"> Summary </span>
           <p class="text-gray-600 font-normal text-sm text-justify leading-6">
             {{ $appData.bio }}

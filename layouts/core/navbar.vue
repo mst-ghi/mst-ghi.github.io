@@ -24,6 +24,16 @@
               Specialties
             </nuxt-link>
           </li>
+
+          <li>
+            <nuxt-link
+              to="/resume"
+              exact
+              class="block py-1 px-3 text-white border-b border-transparent hover:border-gray-100 duration-300"
+            >
+              Resume
+            </nuxt-link>
+          </li>
         </ul>
       </div>
 

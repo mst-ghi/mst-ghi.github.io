@@ -4,7 +4,10 @@
       class="grid grid-cols-6 space-x-0 md:space-x-4 space-y-4 md:space-y-0 w-full"
     >
       <div
-        class="col-span-6 md:col-span-2 bg-blue-100 rounded-xl px-0 py-4 md:p-4 h-min relative md:sticky top-0 md:top-20"
+        :class="[
+          'col-span-6 md:col-span-2 bg-blue-100 rounded-xl px-0 py-4 md:p-4',
+          'h-min max-w-[400px] relative md:sticky top-0 md:top-20',
+        ]"
       >
         <div class="flex flex-col">
           <div class="flex flex-col items-center">

@@ -4,8 +4,10 @@ const AppData = {
   phone: '+98 936 589 5522',
   address: 'Iran, Esfahan',
   nickname: 'mst-ghi',
+  birthday: 'April 2, 1993',
   headline: 'Back-end and Front-end Developer',
   experienceYear: 6,
+  site: 'https://mst-ghi.github.io/',
   headlineStacks: [
     'Nodejs, Nestjs',
     'Php, Laravel',

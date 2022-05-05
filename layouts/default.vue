@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col relative justify-between h-screen">
     <navbar />
-    <div class="flex justify-center items-center container pt-20 md:pt-10">
+    <div
+      class="flex justify-center items-center md:container px-4 md:px-0 pt-20 md:pt-10"
+    >
       <Nuxt />
     </div>
     <main-footer />

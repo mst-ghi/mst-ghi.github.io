@@ -1,5 +1,5 @@
 <template>
-  <div class="flex md:pt-12 w-full -mb-14 relative">
+  <div class="flex md:pt-12 w-full -mb-6 md:-mb-14 relative">
     <div
       class="grid grid-cols-6 space-x-0 md:space-x-4 space-y-4 md:space-y-0 w-full"
     >

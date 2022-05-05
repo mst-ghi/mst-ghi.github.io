@@ -2,14 +2,16 @@
   <div class="flex flex-col">
     <div class="flex flex-col">
       <div class="grid grid-cols-2">
-        <div class="col-span-2 md:col-span-1">
+        <div class="col-span-2 md:col-span-1 order-2 md:order-1">
           <div class="flex justify-center">
             <svg-icon name="hero" class="hero--svg" />
           </div>
         </div>
 
-        <div class="col-span-2 md:col-span-1 flex-col pt-10 md:pt-48">
-          <h1 class="text-3xl text-gray-700 mb-4">
+        <div
+          class="col-span-2 md:col-span-1 flex-col pt-10 md:pt-48 order-1 md:order-2"
+        >
+          <h1 class="text-2xl md:text-3xl text-gray-700 mb-4">
             Hi, I'm <strong>{{ $appData.name }}</strong>
           </h1>
           <h2 class="text-xl text-gray-600 mb-2">
@@ -51,7 +53,7 @@
 
     <div class="flex flex-row">
       <nuxt-link to="/specialties" exact class="w-full">
-        <div class="py-8 bg-blue-100 rounded-lg mt-24">
+        <div class="py-8 bg-blue-100 rounded-lg mt-12 md:mt-24">
           <div class="container">
             <div class="text-center">
               <h2 class="text-2xl text-gray-700 font-medium">

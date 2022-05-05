@@ -32,9 +32,14 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/tailwindcss',
   ],
-  modules: ['@nuxtjs/axios', '@nuxtjs/svg-sprite'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/svg-sprite', '@nuxtjs/sitemap'],
   axios: {
     baseURL: '/',
+  },
+  sitemap: {
+    hostname: 'https://mst-ghi.github.io/',
+    gzip: true,
+    routes: ['/', '/specialties', '/resume'],
   },
   styleResources: {
     scss: ['~assets/scss/mixins.scss', '~assets/scss/variables.scss'],

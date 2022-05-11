@@ -19,7 +19,7 @@ const StacksData = {
   laravel: {
     title: 'Laravel',
     subtitle: 'The PHP Framework for Web Artisans',
-    desc: 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.',
+    desc: 'Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation freeing you to create without sweating the small things.',
     logo: 'laravel',
     link: 'https://laravel.com/',
     isLeftLogo: true,

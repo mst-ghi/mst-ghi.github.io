@@ -2,24 +2,21 @@
   <div class="flex flex-col">
     <div class="flex flex-col">
       <div class="grid grid-cols-2">
-        <div class="col-span-2 md:col-span-1 order-2 md:order-1">
+        <div class="col-span-2 md:col-span-1 order-2">
           <div class="flex justify-center">
             <svg-icon name="hero" class="hero--svg" />
           </div>
         </div>
 
         <div
-          class="col-span-2 md:col-span-1 flex-col pt-10 md:pt-48 order-1 md:order-2"
+          class="col-span-2 md:col-span-1 flex-col pt-10 md:pt-48 md:pl-12 order-1"
         >
           <h1 class="text-2xl md:text-3xl text-gray-700 mb-4">
             Hi, I'm <strong>{{ $appData.name }}</strong>
           </h1>
-          <h2 class="text-xl text-gray-600 mb-2">
-            {{ $appData.headline }}
-          </h2>
           <h2 class="text-xl text-gray-600 mb-8">
-            +{{ $appData.experienceYear }}
-            Year of Experience
+            {{ $appData.headline }}, +{{ $appData.experienceYear }}
+            Year of Experience.
           </h2>
           <vue-typed-js
             :strings="$appData.headlineStacks"

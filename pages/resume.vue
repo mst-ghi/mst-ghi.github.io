@@ -132,7 +132,7 @@
             <div
               v-for="(work, index) in $worksData"
               :key="'work-' + index"
-              class="col-span-2 md:col-span-1 flex flex-col mb-8"
+              class="col-span-2 md:col-span-1 flex flex-col mb-8 md:px-4"
             >
               <div class="flex flex-row mb-1">
                 <span class="text-gray-800">
@@ -163,12 +163,12 @@
 
         <div class="flex flex-col bg-slate-50 rounded-xl px-4 pt-4">
           <span class="text-gray-800 font-medium text-xl mb-5">
-            Top Projects
+            Top Projects and Source Code
           </span>
           <div
             v-for="(project, index) in $projectsData"
             :key="'project-' + index"
-            class="flex flex-row mb-8"
+            class="flex flex-row mb-8 md:px-4"
           >
             <div class="flex flex-col">
               <span class="text-gray-800 mb-1">
@@ -181,14 +181,16 @@
                 :href="project.link"
                 target="_blank"
                 :aria-label="project.title"
-                class="font-medium group flex flex-row space-x-1"
+                class="font-medium group flex flex-row space-x-1 mt-1"
               >
                 <v-icon
                   name="link"
                   class="fill-blue-700 group-hover:fill-blue-500 mt-1"
                   scale="1"
                 />
-                <span class="underline text-blue-700 group-hover:text-blue-500">
+                <span
+                  class="underline text-blue-700 group-hover:text-blue-500 text-sm mt-0.5"
+                >
                   {{ project.link }}
                 </span>
               </a>

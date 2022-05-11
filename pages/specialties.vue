@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col divide-y-2 md:pt-12">
+  <div class="flex flex-col md:pt-12 space-y-8 -mb-6 md:-mb-14">
     <div
       v-for="(stack, index) in $stacksData"
       :key="stack.title"
-      class="flex flex-col w-full py-20 md:py-12 md:px-4"
+      class="flex flex-col w-full bg-slate-50 rounded-xl py-8 md:py-12 px-4 md:px-10"
     >
       <div class="grid grid-cols-3">
         <div
@@ -18,7 +18,10 @@
               stack.isLeftLogo ? 'md:justify-start' : 'md:justify-end',
             ]"
           >
-            <svg-icon :name="stack.logo" class="w-72 h-40" />
+            <svg-icon
+              :name="stack.logo"
+              class="w-72 h-full border-[1px] py-4 px-2 rounded-xl"
+            />
           </div>
         </div>
 
@@ -48,8 +51,10 @@
               class="fill-blue-700 group-hover:fill-blue-500 mt-1"
               scale="1"
             />
-            <span class="underline text-blue-700 group-hover:text-blue-500">
-              Website
+            <span
+              class="underline text-blue-700 group-hover:text-blue-500 text-sm mt-0.5"
+            >
+              {{ stack.link }}
             </span>
           </a>
         </div>

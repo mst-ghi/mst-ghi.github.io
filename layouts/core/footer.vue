@@ -107,7 +107,7 @@
           </p>
 
           <p class="text-white text-xs font-medium">
-            Get source this project
+            The source of this project is
             <br class="block md:hidden" />
             <a
               href="https://github.com/mst-ghi/mst-ghi.github.io"

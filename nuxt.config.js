@@ -22,7 +22,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-png', href: '/logo.png' }],
-    script: [{ src: '/js/welcome.js' }],
+    script: [{ src: '/js/google-tags.js' }, { src: '/js/welcome.js' }],
   },
   css: ['~/assets/css/app.css'],
   plugins: ['~/plugins/packages', '~/plugins/icons', '~/plugins/injects'],

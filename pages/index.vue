@@ -44,6 +44,14 @@
               </h2>
             </div>
           </vue-typed-js>
+
+          <a
+            class="linkedin-button mt-8 w-full md:w-[280px] h-12"
+            href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mst-ghi"
+            target="_blank"
+          >
+            Follow on LinkedIn
+          </a>
         </div>
       </div>
     </div>
@@ -85,5 +93,18 @@ export default class IndexPageComponent extends Vue {}
 .hero--svg {
   height: 500px;
   width: 600px;
+}
+.linkedin-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  border-radius: 12px;
+  background-color: #0a66c2;
+  font-family: 'SF Pro Text', Helvetica, sans-serif;
 }
 </style>

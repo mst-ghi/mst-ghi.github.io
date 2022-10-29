@@ -4,12 +4,19 @@
       <div class="flex flex-col px-5 md:px-20">
         <div class="flex flex-col md:flex-row pb-4 divide-y-1">
           <div
-            class="flex flex-col space-y-4 my-2 text-white w-full md:w-2/3 md:pr-8"
+            class="flex flex-col space-y-2 my-2 text-white w-full md:w-2/3 md:pr-8"
           >
-            <h1 class="font-semibold text-xl -mb-2">
+            <h1 class="font-semibold text-xl mb-1">
               {{ $appData.name }} ({{ $appData.nickname }})
             </h1>
             <p class="text-base md:text-sm text-justify">{{ $appData.bio }}</p>
+
+            <a href="/MostafaGholami-Resume.pdf" download="" class="text-sm">
+              <div class="flex flex-row items-center space-x-2">
+                <v-icon name="file-download" scale="1" class="fill-slate-50" />
+                <span class="mt-1"> Download Resume </span>
+              </div>
+            </a>
           </div>
 
           <div class="flex flex-col md:flex-row w-full md:w-1/3">

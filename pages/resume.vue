@@ -15,11 +15,11 @@
               src="/img/me-square.png"
               :alt="$appData.nickname"
               loading="lazy"
-              class="rounded-full border-2 border-white aspect-square"
+              class="rounded-full border-2 border-white aspect-square min-h-[184px] min-w-[184px]"
             />
 
             <div class="flex flex-col items-center p-2">
-              <h1 class="text-gray-600 font-medium text-2xl">
+              <h1 class="text-gray-600 font-medium text-2xl mt-4">
                 {{ $appData.name }}
               </h1>
 
@@ -112,6 +112,19 @@
                 </span>
               </div>
             </div>
+          </div>
+
+          <div class="flex flex-col px-6 py-3 justify-center items-center">
+            <a
+              href="/MostafaGholami-Resume.pdf"
+              download=""
+              class="bg-slate-600 text-white px-4 py-3 rounded-lg text-sm w-full"
+            >
+              <div class="flex flex-row justify-center items-center space-x-2">
+                <v-icon name="file-download" scale="1" class="fill-slate-50" />
+                <span> Download Resume </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

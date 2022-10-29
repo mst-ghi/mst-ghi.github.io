@@ -11,6 +11,8 @@ import 'vue-awesome/icons/map-marked-alt'
 import 'vue-awesome/icons/calendar-alt'
 import 'vue-awesome/icons/dot-circle'
 import 'vue-awesome/icons/check'
+import 'vue-awesome/icons/download'
+import 'vue-awesome/icons/file-download'
 
 import Icon from 'vue-awesome/components/Icon'
 Vue.component('VIcon', Icon)

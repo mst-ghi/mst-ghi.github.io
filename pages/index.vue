@@ -2,14 +2,17 @@
   <div class="flex flex-col">
     <div class="flex flex-col">
       <div class="grid grid-cols-2">
-        <div class="col-span-2 md:col-span-1 order-2">
-          <div class="flex justify-center">
-            <svg-icon name="hero" class="hero--svg" />
-          </div>
+        <div class="col-span-2 md:col-span-1 md:order-2 md:pt-20">
+          <lottie-vue-player
+            src="https://assets1.lottiefiles.com/packages/lf20_qjryhqec/data.json"
+            style="width: 100%; height: 400px"
+            autoplay
+            loop
+          />
         </div>
 
         <div
-          class="col-span-2 md:col-span-1 flex-col pt-10 md:pt-48 md:pl-12 order-1"
+          class="col-span-2 md:col-span-1 flex-col pt-0 md:pt-48 md:pl-12 md:order-1"
         >
           <h1 class="text-2xl md:text-3xl text-gray-700 mb-4">
             Hi, I'm <strong>{{ $appData.name }}</strong>
@@ -24,7 +27,7 @@
             :typeSpeed="50"
             :backSpeed="20"
             :backDelay="2000"
-            class="border-2 rounded-md md:w-1/2 p-1 relative z-0"
+            class="border-2 rounded-md md:w-2/3 p-1 relative z-0"
           >
             <div>
               <span
@@ -57,25 +60,21 @@
     </div>
 
     <div class="flex flex-row">
-      <nuxt-link to="/specialties" exact class="w-full">
-        <div class="py-8 bg-blue-100 rounded-lg mt-12 md:mt-24">
-          <div class="container">
-            <div class="text-center">
-              <h2 class="text-2xl text-gray-700 font-medium">
-                Top Specialties
-              </h2>
-            </div>
-            <div
-              class="flex md:flex-row flex-wrap space-y-2 items-center justify-between md:px-8"
-            >
-              <svg-icon name="nestjs" class="w-24" />
-              <svg-icon name="nextjs" class="w-32" />
-              <svg-icon name="laravel" class="w-24" />
-              <svg-icon name="nuxtjs" class="w-40 md:w-44" />
-            </div>
+      <div class="py-8 bg-blue-100 rounded-lg mt-12 md:mt-24 w-full">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="text-2xl text-gray-700 font-medium">Top Specialties</h2>
+          </div>
+          <div
+            class="flex md:flex-row flex-wrap space-y-2 items-center justify-between md:px-8"
+          >
+            <svg-icon name="nestjs" class="w-24" />
+            <svg-icon name="nextjs" class="w-32" />
+            <svg-icon name="laravel" class="w-24" />
+            <svg-icon name="nuxtjs" class="w-40 md:w-44" />
           </div>
         </div>
-      </nuxt-link>
+      </div>
     </div>
   </div>
 </template>

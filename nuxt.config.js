@@ -15,11 +15,15 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
+        hid: 'author',
+        name: 'author',
+        content: `Mostafa Gholami`,
+      },
+      {
         hid: 'description',
         name: 'description',
         content: `Mostafa Gholami's website. ${AppData.headline}`,
       },
-      { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-png', href: '/logo.png' }],
     script: [
@@ -28,7 +32,12 @@ export default {
     ],
   },
   css: ['~/assets/css/app.css'],
-  plugins: ['~/plugins/packages', '~/plugins/icons', '~/plugins/injects'],
+  plugins: [
+    '~/plugins/packages',
+    '~/plugins/icons',
+    '~/plugins/injects',
+    '~/plugins/lottie',
+  ],
   components: true,
   buildModules: [
     '@nuxt/typescript-build',
@@ -42,7 +51,7 @@ export default {
   sitemap: {
     hostname: 'https://mst-ghi.github.io/',
     gzip: true,
-    routes: ['/', '/specialties', '/resume'],
+    routes: ['/', '/resume'],
   },
   styleResources: {
     scss: ['~assets/scss/mixins.scss', '~assets/scss/variables.scss'],

@@ -15,7 +15,7 @@
               src="/img/me-square.png"
               :alt="$appData.nickname"
               loading="lazy"
-              class="rounded-full border-2 border-white aspect-square min-h-[184px] min-w-[184px]"
+              class="rounded-full border-2 border-white aspect-square h-[210px] w-[210px]"
             />
 
             <div class="flex flex-col items-center p-2">
@@ -134,9 +134,8 @@
           <span class="text-gray-800 font-medium text-xl mb-3"> Summary </span>
           <p
             class="text-gray-600 font-normal text-sm text-justify leading-6 md:px-4"
-          >
-            {{ $appData.bio }}
-          </p>
+            v-html="$appData.bio"
+          />
         </div>
 
         <div class="flex flex-col bg-slate-50 rounded-xl px-4 pt-4">
@@ -172,6 +171,16 @@
                   {{ work.date }}
                 </span>
               </div>
+              <ul class="mx-2">
+                <li
+                  v-for="(el, idx) in work.details"
+                  :key="'details-' + index + '-' + idx"
+                >
+                  <span class="text-gray-600 text-xs font-normal">
+                    ⇢ {{ el }}
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

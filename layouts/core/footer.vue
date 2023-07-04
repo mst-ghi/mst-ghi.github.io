@@ -9,7 +9,10 @@
             <h1 class="font-semibold text-xl mb-1">
               {{ $appData.name }} ({{ $appData.nickname }})
             </h1>
-            <p class="text-base md:text-sm text-justify">{{ $appData.bio }}</p>
+            <p
+              class="text-base md:text-sm text-justify"
+              v-html="$appData.bio"
+            />
 
             <a href="/MostafaGholami-Resume.pdf" download="" class="text-sm">
               <div class="flex flex-row items-center space-x-2">

@@ -15,8 +15,10 @@ const AppData = {
     'Reactjs, Nextjs',
     'Vuejs, Nuxtjs',
   ],
-  bio: `I'm a back-end and front-end developer with +7 years of experience. Back-end with PHP and Nodejs as well as their common frameworks, such as Laravel and Nestjs. Front-end with Vuejs, Nuxtjs, Reactjs and Nextjs. 
-  I have work experience in these fields as well: Microservice, Kafka, Socket, Monorepo, Caching, Queues.`,
+  bio: `I'm Mostafa. </br>
+  Back-End and Front-End Developer with over 7 years of experience. </br>
+  My expertise lies in PHP, Nodejs, Vuejs, and Reactjs, along with frameworks like Laravel, Lumen, Nest.js, Nuxt.js, and Next.js. </br>
+  I have a background in microservices, Kafka, Socket programming, monorepos, caching, and queues. Throughout my career, I have successfully delivered robust and scalable solutions, ensuring optimal performance and user satisfaction.`,
 }
 
 export default AppData

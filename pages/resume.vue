@@ -185,39 +185,96 @@
           </div>
         </div>
 
-        <div class="flex flex-col bg-slate-50 rounded-xl px-4 pt-4">
-          <span class="text-gray-800 font-medium text-xl mb-5">
-            Top Projects and Source Code
-          </span>
+        <div
+          class="grid grid-cols-6 space-x-0 space-y-4 md:space-y-0 md:space-x-4"
+        >
           <div
-            v-for="(project, index) in $projectsData"
-            :key="'project-' + index"
-            class="flex flex-row mb-8 md:px-4"
+            class="col-span-6 md:col-span-3 flex flex-col space-y-6 bg-slate-50 rounded-xl p-4"
           >
-            <div class="flex flex-col">
-              <span class="text-gray-800 mb-1">
-                {{ project.title }}
-              </span>
-              <span class="text-gray-600 text-sm font-normal">
-                {{ project.desc }}
-              </span>
-              <a
-                :href="project.link"
-                target="_blank"
-                :aria-label="project.title"
-                class="font-medium group flex flex-row space-x-1 mt-1"
-              >
-                <v-icon
-                  name="link"
-                  class="fill-blue-700 group-hover:fill-blue-500 mt-1"
-                  scale="1"
-                />
-                <span
-                  class="underline text-blue-700 group-hover:text-blue-500 text-sm mt-0.5"
-                >
-                  {{ project.link }}
+            <span class="text-gray-800 font-medium text-xl"> Projects </span>
+            <div
+              v-for="(project, index) in $projectsData"
+              :key="'project-' + index"
+              class="flex flex-row mb-8 md:px-4"
+            >
+              <div class="flex flex-col">
+                <span class="text-gray-600 mb-1 font-medium text-md">
+                  {{ project.title }}
                 </span>
-              </a>
+
+                <a
+                  :href="project.link"
+                  target="_blank"
+                  :aria-label="project.title"
+                  class="font-medium group flex flex-row space-x-1 mb-1"
+                >
+                  <v-icon
+                    name="link"
+                    class="fill-blue-700 group-hover:fill-blue-500 mt-1"
+                    scale="1"
+                  />
+                  <span
+                    class="underline text-blue-700 group-hover:text-blue-500 text-sm mt-0.5"
+                  >
+                    {{ project.link }}
+                  </span>
+                </a>
+
+                <div class="flex flex-row gap-1 mt-1">
+                  <span
+                    v-for="(el, idx) in project.desc.split(',')"
+                    :key="'badge-' + index + '-' + idx"
+                    class="text-gray-600 text-[10px] font-medium bg-gray-200 px-2 py-1 rounded-xl"
+                  >
+                    #{{ el.trim() }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-span-6 md:col-span-3 flex flex-col space-y-6 bg-slate-50 rounded-xl p-4"
+          >
+            <span class="text-gray-800 font-medium text-xl"> Open Source </span>
+            <div
+              v-for="(project, index) in $openSourceProjectsData"
+              :key="'openSourceProject-' + index"
+              class="flex flex-row mb-8 md:px-4"
+            >
+              <div class="flex flex-col">
+                <span class="text-gray-600 mb-1 font-medium text-md">
+                  {{ project.title }}
+                </span>
+
+                <a
+                  :href="project.link"
+                  target="_blank"
+                  :aria-label="project.title"
+                  class="font-medium group flex flex-row space-x-1 mb-1"
+                >
+                  <v-icon
+                    name="link"
+                    class="fill-blue-700 group-hover:fill-blue-500 mt-1"
+                    scale="1"
+                  />
+                  <span
+                    class="underline text-blue-700 group-hover:text-blue-500 text-sm mt-0.5"
+                  >
+                    {{ project.link }}
+                  </span>
+                </a>
+
+                <div class="flex flex-row gap-1 mt-1">
+                  <span
+                    v-for="(el, idx) in project.desc.split(',')"
+                    :key="'openSourceProject-badge-' + index + '-' + idx"
+                    class="text-gray-600 text-[10px] font-medium bg-gray-200 px-2 py-1 rounded-xl"
+                  >
+                    #{{ el.trim() }}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

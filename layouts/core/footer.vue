@@ -44,12 +44,12 @@
                   <span>mostafagholamidev@gmail.com</span>
                 </a>
                 <a
-                  href="tel:+989365895522"
-                  aria-label="989365895522"
+                  href="tel:+989981651260"
+                  aria-label="989981651260"
                   class="text-sm font-medium cursor-pointer flex flex-row space-x-1"
                 >
                   <v-icon name="phone" class="fill-white mt-0.5" scale="0.9" />
-                  <span>+989365895522</span>
+                  <span>+989981651260</span>
                 </a>
               </div>
             </div>

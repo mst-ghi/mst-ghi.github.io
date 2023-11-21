@@ -44,8 +44,8 @@
             </a>
 
             <a
-              href="tel:+989365895522"
-              aria-label="989365895522"
+              href="tel:+989981651260"
+              aria-label="989981651260"
               class="text-gray-600 font-normal text-sm flex flex-row"
             >
               <v-icon

@@ -6,6 +6,8 @@ const AppData = {
   nickname: 'mst-ghi',
   birthday: 'April 2, 1993',
   headline: 'Back-end and Front-end Developer',
+  description:
+    'Back-End and Front-End Developer with over 7 years of experience. My expertise lies in PHP, Nodejs, Vuejs, and Reactjs, along with frameworks like Laravel, Lumen, Nest.js, Nuxt.js, and Next.js.',
   experienceYear: 7,
   site: 'https://mst-ghi.github.io/',
   headlineStacks: [

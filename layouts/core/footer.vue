@@ -14,7 +14,11 @@
               v-html="$appData.bio"
             />
 
-            <a href="/MostafaGholami-Resume.pdf" download="" class="text-sm">
+            <a
+              href="/MostafaGholami-Resume.pdf"
+              download=""
+              class="text-sm underline"
+            >
               <div class="flex flex-row items-center space-x-2">
                 <v-icon name="file-download" scale="1" class="fill-slate-50" />
                 <span class="mt-1"> Download Resume </span>
@@ -44,12 +48,12 @@
                   <span>mostafagholamidev@gmail.com</span>
                 </a>
                 <a
-                  href="tel:+989981651260"
-                  aria-label="989981651260"
+                  href="tel:+989365895522"
+                  aria-label="989365895522"
                   class="text-sm font-medium cursor-pointer flex flex-row space-x-1"
                 >
                   <v-icon name="phone" class="fill-white mt-0.5" scale="0.9" />
-                  <span>+989981651260</span>
+                  <span>+989365895522</span>
                 </a>
               </div>
             </div>
@@ -117,7 +121,7 @@
           </p>
 
           <p class="text-white text-xs font-medium">
-            The source of this project is
+            Source of this project is
             <br class="block md:hidden" />
             <a
               href="https://github.com/mst-ghi/mst-ghi.github.io"
@@ -125,7 +129,7 @@
               class="text-sm"
               target="_blank"
             >
-              <strong class="underline">here</strong>
+              <strong class="underline">Here</strong>
             </a>
           </p>
         </div>

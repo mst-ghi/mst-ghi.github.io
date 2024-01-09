@@ -1,7 +1,7 @@
 const AppData = {
   name: 'Mostafa Gholami',
   email: 'mostafagholamidev@gmail.com',
-  phone: '+98 998 165 1260',
+  phone: '+98 936 589 5522',
   address: 'Iran, Esfahan',
   nickname: 'mst-ghi',
   birthday: 'April 2, 1993',
@@ -11,11 +11,11 @@ const AppData = {
   experienceYear: 7,
   site: 'https://mst-ghi.github.io/',
   headlineStacks: [
-    'Nodejs, Nestjs',
-    'Php, Laravel',
-    'Microservice, Kafka',
-    'Reactjs, Nextjs',
-    'Vuejs, Nuxtjs',
+    'Nodejs, Nestjs, Prisma, Realtime, Swagger',
+    'Reactjs, Nextjs, Turborepo, Mantine, Zustand',
+    'Php, Laravel, Lumen, DDD, Scribe',
+    'Vuejs, Nuxtjs, Vuetify, Pinia, Vue',
+    'Microservice, Kafka, Gateway',
   ],
   bio: `I'm Mostafa. </br>
   Back-End and Front-End Developer with over 7 years of experience. </br>

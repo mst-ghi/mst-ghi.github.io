@@ -44,8 +44,8 @@
             </a>
 
             <a
-              href="tel:+989981651260"
-              aria-label="989981651260"
+              href="tel:+989365895522"
+              aria-label="989365895522"
               class="text-gray-600 font-normal text-sm flex flex-row"
             >
               <v-icon
@@ -89,9 +89,7 @@
           </div>
 
           <div class="flex flex-col px-6 mt-3 pb-3">
-            <span class="text-gray-800 font-medium text-xl mb-3">
-              Specialties
-            </span>
+            <span class="text-gray-800 font-medium text-xl mb-3"> Skills </span>
             <div
               v-for="(stack, index) in $appData.headlineStacks"
               :key="'stack-' + index"
@@ -104,11 +102,14 @@
               />
 
               <div class="flex flex-row justify-between w-full space-x-2">
-                <span class="border-[1px] border-white rounded-md p-1 w-full">
+                <span class="border-[1px] border-white rounded-md p-1.5 w-full">
                   {{ stack.split(',')[0].trim() }}
                 </span>
-                <span class="border-[1px] border-white rounded-md p-1 w-full">
+                <span class="border-[1px] border-white rounded-md p-1.5 w-full">
                   {{ stack.split(',')[1].trim() }}
+                </span>
+                <span class="border-[1px] border-white rounded-md p-1.5 w-full">
+                  {{ stack.split(',')[2].trim() }}
                 </span>
               </div>
             </div>

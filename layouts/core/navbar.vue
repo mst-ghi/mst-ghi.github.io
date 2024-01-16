@@ -1,12 +1,14 @@
 <template>
-  <nav class="fixed w-full bg-gray-800 px-1 md:px-4 py-3.5 shadow-sm z-50">
+  <nav
+    class="fixed w-full bg-white px-1 md:px-4 py-3.5 border-b-[1px] border-gray-300 z-50"
+  >
     <div
       class="md:container flex flex-row justify-between items-center mx-2 md:mx-auto"
     >
       <div class="flex flex-row justify-start items-center">
         <a href="/" class="flex items-center md:mr-10">
           <span
-            class="self-center text-xl font-semibold whitespace-nowrap text-white uppercase"
+            class="self-center text-xl font-semibold whitespace-nowrap uppercase"
           >
             {{ $appData.nickname }}
           </span>
@@ -20,7 +22,7 @@
               <nuxt-link
                 to="/"
                 exact
-                class="block py-1 px-3 text-white border-b border-transparent hover:border-gray-100 duration-300"
+                class="block py-1 px-3 border-b border-transparent hover:border-gray-100 duration-300"
               >
                 Home
               </nuxt-link>
@@ -30,7 +32,7 @@
               <nuxt-link
                 to="/resume"
                 exact
-                class="block py-1 px-3 text-white border-b border-transparent hover:border-gray-100 duration-300"
+                class="block py-1 px-3 border-b border-transparent hover:border-gray-100 duration-300"
               >
                 Resume
               </nuxt-link>
@@ -42,10 +44,10 @@
       <a
         href="/MostafaGholami-Resume.pdf"
         download=""
-        class="bg-slate-600 text-white px-4 py-2 rounded-lg text-sm float-right"
+        class="px-4 py-2 rounded-lg text-sm float-right"
       >
         <div class="flex flex-row justify-center items-center space-x-2">
-          <v-icon name="file-download" scale="1" class="fill-slate-50" />
+          <v-icon name="file-download" class="mt-[-3px]" />
           <span> Resume </span>
         </div>
       </a>

@@ -1,7 +1,7 @@
 const OpenSourceProjectsData = [
   {
     title: 'English Learner Project [Frontend]',
-    desc: 'Reactjs, Nextjs, Typescript, Mantine, React Query',
+    desc: 'Reactjs, Nextjs, Typescript, Mantine, ReactQuery',
     link: 'https://github.com/mst-ghi/any-english-backend',
   },
   {

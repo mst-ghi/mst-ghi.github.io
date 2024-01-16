@@ -18,6 +18,7 @@ const ProjectsData = [
     title: 'Pss-e-Trade',
     desc: 'Php, Laravel, Vuejs, Nuxtjs',
     link: 'https://pssetrade.com/',
+    isDown: true,
   },
   {
     title: 'Telebourse',
@@ -28,6 +29,7 @@ const ProjectsData = [
     title: 'Meeno Restaurant',
     desc: 'Nodejs, Nestjs, Postgres, Prisma',
     link: 'https://meeno.ca/',
+    isDown: true,
   },
   {
     title: 'Argegol',
@@ -43,6 +45,7 @@ const ProjectsData = [
     title: 'Gerama',
     desc: 'Php, Laravel, Nodejs, Vuejs, Nuxtjs',
     link: 'https://gerama.ir/',
+    isDown: true,
   },
   {
     title: 'Cafi Mafi',

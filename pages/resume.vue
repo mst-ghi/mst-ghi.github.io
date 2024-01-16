@@ -1,11 +1,11 @@
 <template>
-  <div class="flex md:pt-12 w-full -mb-6 md:-mb-14 relative">
+  <div class="flex w-full -mb-6 md:-mb-14 relative">
     <div
       class="grid grid-cols-6 space-x-0 md:space-x-4 space-y-4 md:space-y-0 w-full"
     >
       <div
         :class="[
-          'col-span-6 md:col-span-2 bg-blue-100 rounded-xl px-0 py-4 md:p-4',
+          'col-span-6 md:col-span-2 bg-slate-100 rounded-xl px-0 py-4 md:p-4',
           'h-min max-w-[400px] relative md:sticky top-0 md:top-20',
         ]"
       >
@@ -15,7 +15,7 @@
               src="/img/me-square.png"
               :alt="$appData.nickname"
               loading="lazy"
-              class="rounded-full border-2 border-white aspect-square h-[210px] w-[210px]"
+              class="rounded-full border-[1px] border-slate-200 aspect-square h-[210px] w-[210px]"
             />
 
             <div class="flex flex-col items-center p-2">
@@ -95,20 +95,20 @@
               :key="'stack-' + index"
               class="text-gray-600 font-normal text-sm text-justify leading-6 pb-2 flex flex-row items-center"
             >
-              <v-icon
-                name="dot-circle"
-                class="fill-gray-500 mt-0.5 mr-2"
-                scale="1.1"
-              />
-
               <div class="flex flex-row justify-between w-full space-x-2">
-                <span class="border-[1px] border-white rounded-md p-1.5 w-full">
+                <span
+                  class="border-[1px] border-slate-200 rounded-md p-1.5 w-full"
+                >
                   {{ stack.split(',')[0].trim() }}
                 </span>
-                <span class="border-[1px] border-white rounded-md p-1.5 w-full">
+                <span
+                  class="border-[1px] border-slate-200 rounded-md p-1.5 w-full"
+                >
                   {{ stack.split(',')[1].trim() }}
                 </span>
-                <span class="border-[1px] border-white rounded-md p-1.5 w-full">
+                <span
+                  class="border-[1px] border-slate-200 rounded-md p-1.5 w-full"
+                >
                   {{ stack.split(',')[2].trim() }}
                 </span>
               </div>
@@ -119,10 +119,14 @@
             <a
               href="/MostafaGholami-Resume.pdf"
               download=""
-              class="bg-slate-600 text-white px-4 py-3 rounded-lg text-sm w-full"
+              class="bg-slate-400 text-white px-4 py-3 rounded-lg text-sm w-full"
             >
               <div class="flex flex-row justify-center items-center space-x-2">
-                <v-icon name="file-download" scale="1" class="fill-slate-50" />
+                <v-icon
+                  name="file-download"
+                  scale="1"
+                  class="fill-slate-50 mt-[-3px]"
+                />
                 <span> Download Resume </span>
               </div>
             </a>
@@ -131,7 +135,7 @@
       </div>
 
       <div class="col-span-6 md:col-span-4 flex flex-col space-y-4">
-        <div class="flex flex-col bg-slate-50 rounded-xl p-4">
+        <div class="flex flex-col bg-slate-100 rounded-xl p-4">
           <span class="text-gray-800 font-medium text-xl mb-3"> Summary </span>
           <p
             class="text-gray-600 font-normal text-sm text-justify leading-6 md:px-4"
@@ -139,7 +143,7 @@
           />
         </div>
 
-        <div class="flex flex-col bg-slate-50 rounded-xl px-4 pt-4">
+        <div class="flex flex-col bg-slate-100 rounded-xl px-4 pt-4">
           <span class="text-gray-800 font-medium text-xl mb-5">
             Work Experience
           </span>
@@ -190,7 +194,7 @@
           class="grid grid-cols-6 space-x-0 space-y-4 md:space-y-0 md:space-x-4"
         >
           <div
-            class="col-span-6 md:col-span-3 flex flex-col space-y-6 bg-slate-50 rounded-xl p-4"
+            class="col-span-6 md:col-span-3 flex flex-col space-y-6 bg-slate-100 rounded-xl p-4"
           >
             <span class="text-gray-800 font-medium text-xl"> Projects </span>
             <div
@@ -198,10 +202,19 @@
               :key="'project-' + index"
               class="flex flex-row mb-8 md:px-4"
             >
-              <div class="flex flex-col">
-                <span class="text-gray-600 mb-1 font-medium text-md">
-                  {{ project.title }}
-                </span>
+              <div class="flex flex-col w-full">
+                <div class="flex flex-row justify-between items-center">
+                  <span class="text-gray-600 mb-1 font-medium text-md">
+                    {{ project.title }}
+                  </span>
+
+                  <span
+                    v-if="project.isDown"
+                    class="text-xs pl-1 text-orange-500"
+                  >
+                    #Inaccessibility
+                  </span>
+                </div>
 
                 <a
                   :href="project.link"
@@ -235,7 +248,7 @@
           </div>
 
           <div
-            class="col-span-6 md:col-span-3 flex flex-col space-y-6 bg-slate-50 rounded-xl p-4"
+            class="col-span-6 md:col-span-3 flex flex-col space-y-6 bg-slate-100 rounded-xl p-4"
           >
             <span class="text-gray-800 font-medium text-xl"> Open Source </span>
             <div
@@ -275,6 +288,44 @@
                     #{{ el.trim() }}
                   </span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-slate-100 rounded-xl px-4 pt-4">
+          <span class="text-gray-800 font-medium text-xl mb-5">
+            Pinned Repositories
+          </span>
+          <div class="grid grid-cols-2">
+            <div
+              v-for="(repo, index) in $pinnedRepoData"
+              :key="'work-' + index"
+              class="col-span-2 md:col-span-1 flex flex-col mb-4 md:px-4"
+            >
+              <div class="flex flex-row mb-1">
+                <a
+                  :href="repo.link"
+                  target="_blank"
+                  :aria-label="repo.title"
+                  class="font-medium group flex flex-row space-x-1 mb-1"
+                >
+                  <v-icon
+                    name="link"
+                    class="fill-blue-700 group-hover:fill-blue-500 mt-1"
+                    scale="1"
+                  />
+                  <span
+                    class="underline text-blue-700 group-hover:text-blue-500 text-sm mt-0.5 capitalize"
+                  >
+                    {{ repo.title }}
+                  </span>
+                </a>
+              </div>
+              <div class="flex flex-row space-x-2">
+                <span class="text-gray-600 text-sm font-normal">
+                  {{ repo.desc }}
+                </span>
               </div>
             </div>
           </div>

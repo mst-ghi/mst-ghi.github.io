@@ -7,19 +7,19 @@ const AppData = {
   birthday: 'April 2, 1993',
   headline: 'Backend and Frontend Developer',
   description:
-    'Backend and Frontend Developer with over 7 years of experience. My expertise lies in PHP, Nodejs, Vuejs, and Reactjs, along with frameworks like Laravel, Lumen, Nest.js, Nuxt.js, and Next.js.',
+    "I'm a Back-end and front-end developer with over 7 years of experience. My expertise encompasses PHP, Node.js, Vue.js, and React.js, supplemented by proficiency in frameworks such as Laravel, Lumen, Nest.js, Nuxt.js, and Next.js. Additionally, I possess a background in microservices architecture, Kafka, socket programming, turborepo, caching strategies, and queue management.",
   experienceYear: 7,
   site: 'https://mst-ghi.github.io/',
   headlineStacks: [
     'Nodejs, Nestjs, Prisma, Swagger',
     'Reactjs, Nextjs, Turborepo, Mantine',
+    'Golang, Gin, Gorm, Swagger',
     'Php, Laravel, Lumen, Scribe',
     'Vuejs, Nuxtjs, Vuetify, Pinia',
-    'Microservice, Kafka, Gateway',
   ],
-  bio: `My expertise lies in PHP, Nodejs, Vuejs, and Reactjs, along with frameworks like Laravel, Lumen, Nest.js, Nuxt.js, and Next.js. </br>
-  I have a background in microservices, Kafka, Socket programming, monorepos, caching, and queues. Throughout my career, I have successfully delivered robust and scalable solutions, ensuring optimal performance and user satisfaction.
-  </br><b>I have chosen to continue my career path by focusing on the NestJS backend framework and NextJS frontend framework.</b>`,
+  bio: `I'm a Back-end and front-end developer with over 7 years of experience. </br>
+  My expertise encompasses PHP, Node.js, Vue.js, and React.js, supplemented by proficiency in frameworks such as Laravel, Lumen, Nest.js, Nuxt.js, and Next.js. Additionally, I possess a background in microservices architecture, Kafka, socket programming, turborepo, caching strategies, and queue management.
+  </br><b>I am also currently learning Golang and actively uploading diverse projects developed with this language to GitHub.</b>`,
 }
 
 export default AppData

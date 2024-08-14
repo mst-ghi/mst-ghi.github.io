@@ -3,8 +3,7 @@
  */
 const nextConfig = {
   output: 'export',
-  distDir: 'docs',
-  assetPrefix: './',
+  reactStrictMode: true,
 };
 
 export default nextConfig;

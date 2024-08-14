@@ -1,0 +1,12 @@
+@import './bg.css';
+
+body {
+  overflow-y: hidden;
+  color: #f9f9f9;
+  background: #15161A;
+}
+
+a {
+  color: #f9f9f9 !important;
+  font-weight: 900 !important;
+}

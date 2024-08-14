@@ -4,6 +4,7 @@
 const nextConfig = {
   output: 'export',
   distDir: 'docs',
+  assetPrefix: './',
 };
 
 export default nextConfig;

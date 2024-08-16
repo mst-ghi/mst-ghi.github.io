@@ -23,7 +23,7 @@ const AppNavigate = () => {
       <Menu.Target>
         <ActionIcon
           pos='absolute'
-          bottom={20}
+          bottom={96}
           right={20}
           size={56}
           color='white'

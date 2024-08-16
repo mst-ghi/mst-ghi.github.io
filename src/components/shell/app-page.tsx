@@ -22,7 +22,7 @@ const AppPage = ({ title, children }: AppPageProps) => {
       >
         <Container fluid={isMobile}>
           {title && <Title mb='md'>{title}</Title>}
-          <Flex direction='column' gap='md'>
+          <Flex direction='column' gap='md' h='100%'>
             {children}
           </Flex>
         </Container>

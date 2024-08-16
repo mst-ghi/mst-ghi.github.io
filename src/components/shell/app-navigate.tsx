@@ -19,15 +19,15 @@ const Links: NavigateLink[] = [
 
 const AppNavigate = () => {
   return (
-    <Menu withArrow withinPortal width={120} position='left-end'>
+    <Menu withinPortal width={120} position='left-end'>
       <Menu.Target>
         <ActionIcon
           pos='absolute'
-          bottom={96}
+          bottom={20}
           right={20}
           size={56}
-          color='white'
           variant='light'
+          color='white'
           radius='xl'
         >
           <IconMenu2 />

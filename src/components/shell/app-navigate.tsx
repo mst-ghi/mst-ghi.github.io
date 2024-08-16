@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useMediaQueries } from '@/hooks';
 import { IconMenu2 } from '@tabler/icons-react';
 import { ActionIcon, Menu, Text } from '@mantine/core';
 
@@ -18,15 +19,17 @@ const Links: NavigateLink[] = [
 ];
 
 const AppNavigate = () => {
+  const { isMobile } = useMediaQueries();
+
   return (
     <Menu withinPortal width={120} position='left-end'>
       <Menu.Target>
         <ActionIcon
           pos='absolute'
-          bottom={20}
-          right={20}
-          size={56}
-          variant='light'
+          bottom={isMobile ? 12 : 36}
+          right={isMobile ? 12 : 36}
+          size={48}
+          variant='outline'
           color='white'
           radius='xl'
         >

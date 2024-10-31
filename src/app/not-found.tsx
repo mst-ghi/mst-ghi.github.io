@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { AppPage } from '@/components/shell';
 import { usePathname } from 'next/navigation';
-import { IconHome } from '@tabler/icons-react';
 import { Button, Center, Flex, Text } from '@mantine/core';
 
 export default function NotFoundPage() {
@@ -29,8 +28,8 @@ export default function NotFoundPage() {
         </Text>
 
         <Flex direction='row' align='center' justify='center' gap='xl'>
-          <Button leftSection={<IconHome />} variant='outline' component={Link} href='/'>
-            Home Page
+          <Button variant='outline' component={Link} href='/'>
+            Go To Home Page
           </Button>
         </Flex>
       </Center>

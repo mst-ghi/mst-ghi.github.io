@@ -13,7 +13,7 @@ const AppPage = ({ title, children }: AppPageProps) => {
   const { isMobile } = useMediaQueries();
 
   return (
-    <ScrollArea mb='md'>
+    <ScrollArea mb='md' mah={isMobile ? '100dvh' : 'calc(100dvh - 124px)'}>
       <motion.main
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}

@@ -1,17 +1,22 @@
 'use client';
 
 import { AppData } from '@/data';
-import { Title, Text } from '@mantine/core';
+import { Text } from '@mantine/core';
+import { useMediaQueries } from '@/hooks';
 import { AppPage } from '@/components/shell';
 import { TypeAnimation } from 'react-type-animation';
 
 export default function HomePage() {
+  const { isMobile } = useMediaQueries();
+
   return (
     <AppPage>
-      <Text fz={24} fw={700}>
+      <Text fz={24} fw={700} mb='-sm'>
         Hi
       </Text>
-      <Title>I'm {AppData.name}</Title>
+      <Text fz={isMobile ? 26 : 32} fw={800}>
+        I'm {AppData.name}
+      </Text>
       <Text fz={20} fw={700} mt='-md'>
         {AppData.headline}
       </Text>

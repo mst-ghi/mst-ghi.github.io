@@ -1,8 +1,8 @@
 'use client';
 
-import { AppShell, Center, Loader } from '@mantine/core';
 import AppNavigate from './app-navigate';
 import { useEffect, useState } from 'react';
+import { AppShell, Center, Loader } from '@mantine/core';
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
@@ -29,13 +29,13 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         footer: { padding: 16 },
       }}
     >
-      {Array.from({ length: 12 }).map((e, idx) => (
+      {Array.from({ length: 16 }).map((e, idx) => (
         <div key={`firefly-${idx}`} className='firefly' />
       ))}
 
       {loading && (
         <Center h='100dvh' pos='absolute' left={0} top={0} right={0} bottom={0}>
-          <Loader />
+          <Loader color='white' />
         </Center>
       )}
 

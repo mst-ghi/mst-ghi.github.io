@@ -46,8 +46,8 @@ nutrition programs, athlete management, and social
 features. The backend was built with Nest.js, and the
 frontend was developed using Next.js.`,
     links: [
-      'https://maryamfatemi-app.liara.run',
-      'https://maryamfatemi-dashboard.liara.run',
+      'https://maryamfatemi.com',
+      'https://dashboard.maryamfatemi.com',
       'https://maryamfatemi-api.liara.run/docs',
     ],
   },

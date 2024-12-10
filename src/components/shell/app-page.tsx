@@ -13,14 +13,14 @@ const AppPage = ({ title, children }: AppPageProps) => {
   const { isMobile } = useMediaQueries();
 
   return (
-    <ScrollArea mb='md' mah={isMobile ? '100dvh' : 'calc(100dvh - 124px)'}>
+    <ScrollArea mb='md' mah={isMobile ? '100dvh' : 'calc(100dvh - 100px)'}>
       <motion.main
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -16 }}
         transition={{ duration: 0.2 }}
       >
-        <Container fluid={isMobile}>
+        <Container pos='relative' fluid={isMobile} px={isMobile ? 0 : undefined}>
           {title && <Title mb='md'>{title}</Title>}
           <Flex direction='column' gap='md' h='100%'>
             {children}

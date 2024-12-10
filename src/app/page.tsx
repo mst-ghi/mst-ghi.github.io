@@ -30,6 +30,8 @@ export default function HomePage() {
           1500,
           AppData.headlineStacks[3],
           1500,
+          AppData.headlineStacks[4],
+          1500,
         ]}
         wrapper='span'
         cursor={true}

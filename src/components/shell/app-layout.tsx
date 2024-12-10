@@ -26,7 +26,6 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
           flexDirection: 'column',
           justifyContent: 'center',
         },
-        footer: { padding: 16 },
       }}
     >
       {Array.from({ length: 16 }).map((e, idx) => (

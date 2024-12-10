@@ -1,17 +1,21 @@
 'use client';
 
+import Link from 'next/link';
 import { AppData } from '@/data';
+import { useMediaQueries } from '@/hooks';
 import { AppPage } from '@/components/shell';
-import { Anchor, Button, Flex, List, Text } from '@mantine/core';
+import { Anchor, Button, Flex, Text } from '@mantine/core';
 import {
+  IconAlertCircle,
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandTelegram,
   IconBrandTwitter,
 } from '@tabler/icons-react';
-import Link from 'next/link';
 
 export default function ContactPage() {
+  const { isDesktop } = useMediaQueries();
+
   return (
     <AppPage title="Let's Collaborate">
       <Text fz={18}>
@@ -20,23 +24,42 @@ export default function ContactPage() {
         contact details provided. Looking forward to discussing how I can assist with your project.
       </Text>
 
-      <List withPadding size='lg'>
-        <List.Item>
-          Email:{' '}
-          <Anchor href={`mail::${AppData.email}`} aria-label={AppData.email}>
-            {AppData.email}
-          </Anchor>
-        </List.Item>
+      <Flex direction='row' align='center' gap={4}>
+        <Text size='sm' fw={400}>
+          Email:
+        </Text>
+        <Anchor
+          href={`mail::${AppData.email}`}
+          aria-label={AppData.email}
+          size={isDesktop ? 'lg' : 'sm'}
+        >
+          {AppData.email}
+        </Anchor>
+      </Flex>
 
-        <List.Item>
-          Mobile:{' '}
-          <Anchor href={`tel::${AppData.phone.replaceAll(' ', '')}`} aria-label={AppData.phone}>
-            {AppData.phone}
-          </Anchor>
-        </List.Item>
-      </List>
+      <Flex direction='row' align='center' gap={4} mt='-xs'>
+        <Text size='sm' fw={400}>
+          Mobile:
+        </Text>
+        <Anchor
+          href={`tel::${AppData.phone.replaceAll(' ', '')}`}
+          aria-label={AppData.phone}
+          size={isDesktop ? 'lg' : 'sm'}
+        >
+          {AppData.phone.replaceAll(' ', '')}
+        </Anchor>
+      </Flex>
 
-      <Text mt='xl' fw={600} fz={24}>
+      <Link href={'https://github.com/mst-ghi'} target='_blank'>
+        <Flex direction='row' gap='xs' mt='lg'>
+          <IconAlertCircle />
+          <Text fw={700} tt='uppercase' td='underline'>
+            Visit my GitHub and check out my repositories.
+          </Text>
+        </Flex>
+      </Link>
+
+      <Text mt='md' fw={600} fz={24}>
         Stay Connected:
       </Text>
 

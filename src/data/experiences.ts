@@ -11,7 +11,7 @@ export const Experiences: Experience[] = [
     id: 'exp-1',
     label: 'Front-end Developer',
     company: 'Avid Advice LLC Co. Yerevan, Armenia',
-    date: 'Since October 2021',
+    date: 'October 2021 - September 2024',
     features: [
       'Developing a multitenant web app with Next.js for workouts, advice, legal, etc',
       'Project development utilizes Turborepo to create components as an internal package and handle multiple web apps in one source code',

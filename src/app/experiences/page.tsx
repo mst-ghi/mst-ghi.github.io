@@ -1,10 +1,13 @@
 'use client';
 
-import { AppPage } from '@/components/shell';
 import { Experiences } from '@/data';
+import { useMediaQueries } from '@/hooks';
+import { AppPage } from '@/components/shell';
 import { Card, Flex, List, Stack, Text, Title } from '@mantine/core';
 
 export default function ExperiencesPage() {
+  const { isDesktop } = useMediaQueries();
+
   return (
     <AppPage title='Experiences'>
       <Stack>
@@ -18,9 +21,13 @@ export default function ExperiencesPage() {
                 </Text>
                 <Text fz={13}>{exp.date}</Text>
 
-                <List size='sm' mt={6} withPadding>
+                <List mt='xs' size='xs' withPadding={isDesktop}>
                   {exp.features.map((feature, idx) => {
-                    return <List.Item key={`feature-${idx}`}>{feature}</List.Item>;
+                    return (
+                      <List.Item key={`feature-${idx}`}>
+                        <Text size={isDesktop ? 'md' : 'sm'}>{feature}</Text>
+                      </List.Item>
+                    );
                   })}
                 </List>
               </Flex>

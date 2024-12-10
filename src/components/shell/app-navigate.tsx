@@ -69,7 +69,8 @@ const AppNavigate = () => {
       align='center'
       justify='center'
       gap='xl'
-      mb={24}
+      h={48}
+      mb={8}
       mt={24}
     >
       {Links.map((ln, idx) => {

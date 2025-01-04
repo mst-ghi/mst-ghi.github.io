@@ -3,7 +3,6 @@
 body {
   overflow-y: hidden;
   color: #f9f9f9;
-  background: #15161A;
 }
 
 a {
@@ -13,4 +12,8 @@ a {
 
 .mantine-Title-root{
   font-family: inherit;
+}
+
+.mantine-Card-root {
+  border-left: 6px solid #f9f9f999;
 }

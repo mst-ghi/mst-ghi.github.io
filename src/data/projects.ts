@@ -2,6 +2,7 @@ interface Project {
   id: string;
   label: string;
   desc: string;
+  tags?: string[];
   links: string[];
 }
 
@@ -17,6 +18,14 @@ Next.js. Key features of the platform include a store, social
 media system, chat, online sessions and classes, various
 management sections, support for different businesses, and
 a website builder.`,
+    tags: [
+      'React.js',
+      'Next.js',
+      'Turborepo',
+      'Mantine UI',
+      'Featured Design',
+      'Shared Components',
+    ],
     links: [
       'https://avidbizz.com',
       'https://seller.avidbizz.com',
@@ -32,6 +41,7 @@ a website builder.`,
 center, using Nest.js and Angular. The management
 dashboard was designed and implemented to oversee the
 center's activities.`,
+    tags: ['Node.js', 'Nest.js', 'Custom Jwt', 'Shared Libs', 'Swagger Doc', 'Restful', 'MariaDB'],
     links: [
       'https://sadeghicustoms.ir',
       'https://sadeghicustoms.ir/panel',
@@ -45,6 +55,19 @@ center's activities.`,
 nutrition programs, athlete management, and social
 features. The backend was built with Nest.js, and the
 frontend was developed using Next.js.`,
+    tags: [
+      'Node.js',
+      'Nest.js',
+      'Custom Jwt',
+      'Shared Libs',
+      'Swagger Doc',
+      'MariaDB',
+      'Restful',
+      'React.js',
+      'Next.js',
+      'Mantine UI',
+      'Featured Design',
+    ],
     links: [
       'https://maryamfatemi.com',
       'https://dashboard.maryamfatemi.com',
@@ -60,6 +83,20 @@ was built with Nest.js and Lumen using a microservices
 architecture and Kafka as a message broker, while the
 frontend was developed with Vue.js. Api subdomain
 changes periodically.`,
+    tags: [
+      'Node.js',
+      'Nest.js',
+      'Php',
+      'Lumen',
+      'Microservice',
+      'Kafka',
+      'Custom Jwt',
+      'Shared Libs',
+      'Swagger Doc',
+      'MongoDB',
+      'PostgresDB',
+      'MariaDB',
+    ],
     links: ['https://alert.ir', 'https://my.alert.ir', 'https://sfds.alert.ir'],
   },
   {
@@ -69,6 +106,20 @@ changes periodically.`,
 information. Designing and developing various financial
 charts. Backend development using two Lumen apps and
 one Nest.js app. Frontend development using Nuxt.js`,
+    tags: [
+      'Node.js',
+      'Nest.js',
+      'Php',
+      'Lumen',
+      'Custom Jwt',
+      'Shared Libs',
+      'Swagger Doc',
+      'Vue.js',
+      'Nuxt.js',
+      'Vuetify',
+      'Charts',
+      'MariaDB',
+    ],
     links: [
       'https://telebourse.ir',
       'https://teleboard.telebourse.ir',
@@ -83,6 +134,26 @@ Nest.js, Next.js and Nuxt.js. It includes admin panel, service
 provider panel, web app, and mobile app. Backend consists
 of three Node.js applications that communicate with each
 other via Redis.`,
+    tags: [
+      'Node.js',
+      'Nest.js',
+      'Php',
+      'Laravel',
+      'Custom Jwt',
+      'Shared Libs',
+      'Swagger',
+      'Microservice',
+      'Redis',
+      'MongoDB',
+      'PostgresDB',
+      'MariaDB',
+      'Vue.js',
+      'Nuxt.js',
+      'Vuetify',
+      'React.js',
+      'Next.js',
+      'Material UI',
+    ],
     links: [
       'https://biz.tamuk.ir',
       'https://panel.tamuk.ir',
@@ -96,6 +167,7 @@ other via Redis.`,
     desc: `Online flower, plant, and gardening equipment store using
 Laravel and Nuxt.js. This project includes the backend,
 vendor panel, admin panel, web app, and mobile app.`,
+    tags: ['Php', 'Laravel', 'Custom Jwt', 'Redis', 'MariaDB', 'Vue.js', 'Nuxt.js', 'Vuetify'],
     links: ['https://argegol.com'],
   },
   {
@@ -104,6 +176,17 @@ vendor panel, admin panel, web app, and mobile app.`,
     desc: `Online coffee and coffee equipment store using Laravel and
 Nuxt.js. This project includes backend, admin panel, and a
 web app.`,
+    tags: [
+      'Php',
+      'Laravel',
+      'Custom Jwt',
+      'Redis',
+      'MongoDB',
+      'MariaDB',
+      'Vue.js',
+      'Nuxt.js',
+      'Tailwind',
+    ],
     links: ['https://cafimafi.com'],
   },
 ];

@@ -1,34 +1,34 @@
 'use client';
 
-import { Projects } from '@/data';
+import { OpenSources } from '@/data';
 import { useMediaQueries } from '@/hooks';
 import { AppPage } from '@/components/shell';
 import { Card, Flex, List, Stack, Title, Text, Anchor, Badge } from '@mantine/core';
 
-export default function ProjectsPage() {
+export default function OpenSourcesPage() {
   const { isDesktop } = useMediaQueries();
-  const length = Projects.length;
+  const length = OpenSources.length;
 
   return (
-    <AppPage title='Projects'>
+    <AppPage title='Open Sources'>
       <Stack>
-        {Projects.map((project, idx) => {
+        {OpenSources.map((source, idx) => {
           return (
-            <Card key={project.id} withBorder bg='transparent'>
+            <Card key={source.id} withBorder bg='transparent'>
               <Flex direction='column' gap='xs'>
                 <Title order={3} lh={1.2}>
-                  {length - idx}.{project.label}
+                  {length - idx}.{source.label}
                 </Title>
 
                 <Text fz={15} fw={600}>
-                  {project.desc}
+                  {source.desc}
                 </Text>
 
-                {project.tags && (
+                {source.tags && (
                   <Flex direction='row' align='center' gap={isDesktop ? 'xs' : 6} wrap='wrap'>
-                    {project.tags.map((tag) => (
+                    {source.tags.map((tag) => (
                       <Badge
-                        key={project.id + '-' + tag.replaceAll(' ', '-')}
+                        key={source.id + '-' + tag.replaceAll(' ', '-')}
                         style={{ textTransform: 'capitalize' }}
                       >
                         {tag}
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
                 )}
 
                 <List size={'sm'} withPadding={isDesktop}>
-                  {project.links.map((link, idx) => {
+                  {source.links.map((link, idx) => {
                     return (
                       <List.Item key={`link-${idx}`}>
                         <Anchor href={link} target='_blank' size={isDesktop ? 'md' : 'sm'}>

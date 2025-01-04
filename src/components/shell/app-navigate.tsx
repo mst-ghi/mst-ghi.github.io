@@ -15,10 +15,11 @@ interface NavigateLink {
 const Links: NavigateLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Projects', href: '/projects' },
   { label: 'Experiences', href: '/experiences' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Open-Sources', href: '/open-sources' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Resume', href: '/resume/MostafaGholami-Resume.pdf', newTab: true },
+  { label: 'Download-Resume', href: '/resume/MostafaGholami-Resume.pdf', newTab: true },
 ];
 
 const AppNavigate = () => {
@@ -27,7 +28,7 @@ const AppNavigate = () => {
 
   if (isMobile) {
     return (
-      <Menu withinPortal width={136} position='left-end'>
+      <Menu withinPortal width={178} position='left-end' withArrow arrowPosition='center'>
         <Menu.Target>
           <ActionIcon
             pos='absolute'
@@ -51,7 +52,10 @@ const AppNavigate = () => {
                 href={ln.href || '#'}
                 target={ln.newTab ? '_blank' : undefined}
               >
-                <Text fw={500}> {ln.label}</Text>
+                <Text fw={500} size='sm'>
+                  {' '}
+                  - {ln.label}
+                </Text>
               </Menu.Item>
             );
           })}
@@ -80,11 +84,6 @@ const AppNavigate = () => {
           isActive = pathname === ln.href;
         }
 
-        let label = ln.label;
-        if (ln.href.startsWith('/resume')) {
-          label = 'Download-Resume';
-        }
-
         return (
           <Link
             key={`menu-${ln.href}-${idx}`}
@@ -92,7 +91,7 @@ const AppNavigate = () => {
             target={ln.newTab ? '_blank' : undefined}
             style={{ textDecoration: 'none', position: 'relative' }}
           >
-            <Text fw={700}>{label}</Text>
+            <Text fw={isActive ? 700 : 400}>{ln.label}</Text>
             {isActive && (
               <IconChevronUp
                 size={18}

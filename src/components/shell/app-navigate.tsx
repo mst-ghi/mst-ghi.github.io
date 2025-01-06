@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useMediaQueries } from '@/hooks';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { ActionIcon, Flex, Menu, Text } from '@mantine/core';
 import { IconChevronUp, IconMenu2 } from '@tabler/icons-react';
@@ -25,6 +26,18 @@ const Links: NavigateLink[] = [
 const AppNavigate = () => {
   const pathname = usePathname();
   const { isMobile } = useMediaQueries();
+
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsReady(true);
+    }, 1000);
+  }, []);
+
+  if (!isReady) {
+    return null;
+  }
 
   if (isMobile) {
     return (

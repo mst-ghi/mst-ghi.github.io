@@ -4,14 +4,9 @@ import Link from 'next/link';
 import { AppData } from '@/data';
 import { useMediaQueries } from '@/hooks';
 import { AppPage } from '@/components/shell';
-import { Anchor, Button, Flex, Text } from '@mantine/core';
-import {
-  IconAlertCircle,
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandTelegram,
-  IconBrandTwitter,
-} from '@tabler/icons-react';
+import { Socials } from '@/components/common';
+import { Anchor, Flex, Text } from '@mantine/core';
+import { IconAlertCircle } from '@tabler/icons-react';
 
 export default function ContactPage() {
   const { isDesktop } = useMediaQueries();
@@ -63,47 +58,7 @@ export default function ContactPage() {
         Stay Connected:
       </Text>
 
-      <Flex direction='row' align='center' gap='sm' wrap='wrap'>
-        <Button
-          leftSection={<IconBrandGithub />}
-          variant='subtle'
-          component={Link}
-          href={'https://github.com/mst-ghi'}
-          target='_blank'
-        >
-          Github
-        </Button>
-
-        <Button
-          leftSection={<IconBrandLinkedin />}
-          variant='subtle'
-          component={Link}
-          href={'https://www.linkedin.com/in/mst-ghi/'}
-          target='_blank'
-        >
-          Linkedin
-        </Button>
-
-        <Button
-          leftSection={<IconBrandTelegram />}
-          variant='subtle'
-          component={Link}
-          href={'https://t.me/@mostafa_ghi'}
-          target='_blank'
-        >
-          Telegram
-        </Button>
-
-        <Button
-          leftSection={<IconBrandTwitter />}
-          variant='subtle'
-          component={Link}
-          href={'https://x.com/mst_ghi'}
-          target='_blank'
-        >
-          Twitter
-        </Button>
-      </Flex>
+      <Socials />
     </AppPage>
   );
 }

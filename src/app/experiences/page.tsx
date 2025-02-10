@@ -20,6 +20,7 @@ export default function ExperiencesPage() {
                   {exp.company}
                 </Text>
                 <Text fz={13}>{exp.date}</Text>
+                <Text fz={13}>{exp.workType}</Text>
 
                 <List mt='xs' size='xs' withPadding={isDesktop}>
                   {exp.features.map((feature, idx) => {

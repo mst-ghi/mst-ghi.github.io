@@ -34,7 +34,7 @@ export default function ProjectsPage() {
             <Card key={project.id} withBorder bg='transparent'>
               <Flex direction='column' gap='xs'>
                 <Title order={3} lh={1.2}>
-                  {length - idx}.{project.label}
+                  {length - idx}. {project.label}
                 </Title>
 
                 <Text fz={15} fw={600}>

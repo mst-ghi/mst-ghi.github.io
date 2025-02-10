@@ -20,7 +20,7 @@ const Links: NavigateLink[] = [
   { label: 'Projects', href: '/projects' },
   { label: 'Open-Sources', href: '/open-sources' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Download-Resume', href: '/resume/MostafaGholami-Resume.pdf', newTab: true },
+  { label: 'Resume-Files', href: '/resume' },
 ];
 
 const AppNavigate = () => {

@@ -8,7 +8,20 @@ interface Project {
 
 export const Projects: Project[] = [
   {
-    id: 'proj-1',
+    id: 'proj-9',
+    label: 'Digital Brand Boards',
+    desc: `The Digital Advertising Boards project was built with NestJS and Lumen, 
+    featuring eight microservices. The system allowed an Android app to 
+    communicate with the backend, enabling to display programs on digital 
+    billboards. The admin panel provided tools for designing ads program for 
+    various billboard sizes and scheduling content for each model, 
+    ensuring dynamic, time-based display management.`,
+    tags: ['Nest.js', 'Nuxt.js', 'Microservice', 'Postgres', 'Custom Authorize', 'Swagger'],
+    links: ['https://karizor.com/'],
+  },
+
+  {
+    id: 'proj-8',
     label: 'Social Media Platform',
     desc: `Social media platform designed to help users achieve their
 business goals and enhance their visibility. The backend of
@@ -49,7 +62,7 @@ center's activities.`,
     ],
   },
   {
-    id: 'proj-8',
+    id: 'proj-6',
     label: 'Gym and athlete management',
     desc: `Gym management project that includes sports and
 nutrition programs, athlete management, and social
@@ -75,7 +88,7 @@ frontend was developed using Next.js.`,
     ],
   },
   {
-    id: 'proj-2',
+    id: 'proj-5',
     label: 'Intelligent Fire Fighting System',
     desc: `Developed an online fire safety and emergency services
 project using IoT for fire monitoring and alerts. The backend
@@ -100,7 +113,7 @@ changes periodically.`,
     links: ['https://alert.ir', 'https://my.alert.ir', 'https://sfds.alert.ir'],
   },
   {
-    id: 'proj-3',
+    id: 'proj-4',
     label: "Iran's Capital Market",
     desc: `Utilizing web scraping techniques to gather stock market
 information. Designing and developing various financial
@@ -127,7 +140,7 @@ one Nest.js app. Frontend development using Nuxt.js`,
     ],
   },
   {
-    id: 'proj-4',
+    id: 'proj-3',
     label: 'Material and Goods Supply System',
     desc: `Specialized social network for businesses. Developed using
 Nest.js, Next.js and Nuxt.js. It includes admin panel, service
@@ -162,7 +175,7 @@ other via Redis.`,
     ],
   },
   {
-    id: 'proj-5',
+    id: 'proj-2',
     label: 'Online Flower Shop',
     desc: `Online flower, plant, and gardening equipment store using
 Laravel and Nuxt.js. This project includes the backend,
@@ -171,7 +184,7 @@ vendor panel, admin panel, web app, and mobile app.`,
     links: ['https://argegol.com'],
   },
   {
-    id: 'proj-6',
+    id: 'proj-1',
     label: 'Online Coffee Shop',
     desc: `Online coffee and coffee equipment store using Laravel and
 Nuxt.js. This project includes backend, admin panel, and a

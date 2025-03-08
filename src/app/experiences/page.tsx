@@ -1,6 +1,7 @@
 'use client';
 
 import { Experiences } from '@/data';
+import Tilt from 'react-parallax-tilt';
 import { useMediaQueries } from '@/hooks';
 import { AppPage } from '@/components/shell';
 import { Card, Flex, List, Stack, Text, Title } from '@mantine/core';
@@ -13,26 +14,28 @@ export default function ExperiencesPage() {
       <Stack>
         {Experiences.map((exp) => {
           return (
-            <Card key={exp.id} withBorder bg='transparent'>
-              <Flex direction='column'>
-                <Title order={3}>{exp.label}</Title>
-                <Text fz={15} fw={600}>
-                  {exp.company}
-                </Text>
-                <Text fz={13}>{exp.date}</Text>
-                <Text fz={13}>{exp.workType}</Text>
+            <Tilt key={exp.id} tiltMaxAngleX={0} tiltMaxAngleY={14}>
+              <Card withBorder bg='transparent'>
+                <Flex direction='column'>
+                  <Title order={3}>{exp.label}</Title>
+                  <Text fz={15} fw={600}>
+                    {exp.company}
+                  </Text>
+                  <Text fz={13}>{exp.date}</Text>
+                  <Text fz={13}>{exp.workType}</Text>
 
-                <List mt='xs' size='xs' withPadding={isDesktop}>
-                  {exp.features.map((feature, idx) => {
-                    return (
-                      <List.Item key={`feature-${idx}`}>
-                        <Text size={isDesktop ? 'md' : 'sm'}>{feature}</Text>
-                      </List.Item>
-                    );
-                  })}
-                </List>
-              </Flex>
-            </Card>
+                  <List mt='xs' size='xs' withPadding={isDesktop}>
+                    {exp.features.map((feature, idx) => {
+                      return (
+                        <List.Item key={`feature-${idx}`}>
+                          <Text size={isDesktop ? 'md' : 'sm'}>{feature}</Text>
+                        </List.Item>
+                      );
+                    })}
+                  </List>
+                </Flex>
+              </Card>
+            </Tilt>
           );
         })}
       </Stack>

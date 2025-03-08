@@ -2454,6 +2454,11 @@ react-number-format@^5.4.3:
   resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-5.4.3.tgz#e634df907da7742faf597afab3f25f9a59689d60"
   integrity sha512-VCY5hFg/soBighAoGcdE+GagkJq0230qN6jcS5sp8wQX1qy1fYN/RX7/BXkrs0oyzzwqR8/+eSUrqXbGeywdUQ==
 
+react-parallax-tilt@^1.7.285:
+  version "1.7.285"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.285.tgz#fd793c67f7b2703d22107439fd02775ac73ad269"
+  integrity sha512-WRYyvLoaZvLwqDKHuSE/sDODPNuaCXH5nRcgC0zTtnnVaWZHQN21dTS7sq1SZgkI8Dwm2AoN3DW7C65oXeaEKg==
+
 react-remove-scroll-bar@^2.3.7:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz#99c20f908ee467b385b68a3469b4a3e750012223"

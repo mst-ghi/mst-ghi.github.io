@@ -1,8 +1,8 @@
 'use client';
 
-import { Flex, List, Text } from '@mantine/core';
-import { AppPage } from '@/components/shell';
 import Link from 'next/link';
+import { AppPage } from '@/components/shell';
+import { Flex, List, Text } from '@mantine/core';
 
 export default function ResumePage() {
   return (
@@ -20,7 +20,7 @@ export default function ResumePage() {
 
       <List size='lg'>
         <List.Item>
-          <Flex direction='row' align='center' gap='xs'>
+          <Flex direction='row' align='center' justify='space-between' gap='xs' miw={320}>
             <Text>Fullstack Developer</Text>
             <Link href='/resume/MostafaGholami-FullStackResume.pdf' target='_blank'>
               <Text fw={700} tt='uppercase' td='underline'>
@@ -31,7 +31,7 @@ export default function ResumePage() {
         </List.Item>
 
         <List.Item>
-          <Flex direction='row' align='center' gap='xs'>
+          <Flex direction='row' align='center' justify='space-between' gap='xs' miw={320}>
             <Text>Backend Developer</Text>
             <Link href='/resume/MostafaGholami-BackendResume.pdf' target='_blank'>
               <Text fw={700} tt='uppercase' td='underline'>
@@ -42,7 +42,7 @@ export default function ResumePage() {
         </List.Item>
 
         <List.Item>
-          <Flex direction='row' align='center' gap='xs'>
+          <Flex direction='row' align='center' justify='space-between' gap='xs' miw={320}>
             <Text>Frontend Developer</Text>
             <Link href='/resume/MostafaGholami-FrontendResume.pdf' target='_blank'>
               <Text fw={700} tt='uppercase' td='underline'>

@@ -1,0 +1,19 @@
+@import './bg.css';
+
+body {
+  overflow-y: hidden;
+  color: #f9f9f9;
+}
+
+a {
+  color: #f9f9f9 !important;
+  font-weight: 900 !important;
+}
+
+.mantine-Title-root{
+  font-family: inherit;
+}
+
+.mantine-Card-root {
+  border-left: 6px solid #f9f9f999;
+}

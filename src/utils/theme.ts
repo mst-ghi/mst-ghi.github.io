@@ -7,6 +7,11 @@ export const ThemeObject: MantineThemeOverride = {
   defaultRadius: 'md',
   other: {},
   components: {
+    Loader: {
+      defaultProps: {
+        type: 'bars',
+      },
+    },
     Button: {
       defaultProps: {
         variant: 'light',

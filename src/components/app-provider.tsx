@@ -6,7 +6,6 @@ import '../styles/globals.css';
 import { Suspense } from 'react';
 import { AppLayout } from './shell';
 import { ThemeObject } from '@/utils/theme';
-import { ModalsProvider } from '@mantine/modals';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
@@ -14,9 +13,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
     <Suspense>
       <ColorSchemeScript forceColorScheme='dark' />
       <MantineProvider forceColorScheme='dark' theme={ThemeObject}>
-        <ModalsProvider labels={{ confirm: 'Yes', cancel: 'No' }}>
-          <AppLayout>{children}</AppLayout>
-        </ModalsProvider>
+        <AppLayout>{children}</AppLayout>
       </MantineProvider>
     </Suspense>
   );

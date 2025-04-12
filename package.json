@@ -11,14 +11,10 @@
   "dependencies": {
     "@mantine/core": "^7.17.0",
     "@mantine/hooks": "^7.17.0",
-    "@mantine/modals": "^7.17.0",
     "@tabler/icons-react": "^3.30.0",
-    "dayjs": "^1.11.12",
-    "framer-motion": "^12.4.7",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-parallax-tilt": "^1.7.285",
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {

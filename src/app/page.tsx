@@ -1,11 +1,12 @@
 'use client';
 
+import Link from 'next/link';
 import { AppData } from '@/data';
 import { useMediaQueries } from '@/hooks';
 import { AppPage } from '@/components/shell';
-import { Socials } from '@/components/common';
-import { Anchor, Flex, Text } from '@mantine/core';
+import { IconDownload } from '@tabler/icons-react';
 import { TypeAnimation } from 'react-type-animation';
+import { Anchor, Box, Button, Flex, Text } from '@mantine/core';
 
 export default function HomePage() {
   const { isMobile, isDesktop } = useMediaQueries();
@@ -66,7 +67,18 @@ export default function HomePage() {
         </Anchor>
       </Flex>
 
-      <Socials />
+      <Box mt='md'>
+        <Button
+          component={Link}
+          variant='outline'
+          color='#f9f9f9'
+          target='_blank'
+          href='/MostafaGholami-Resume.pdf'
+          leftSection={<IconDownload size={20} />}
+        >
+          Download My Resume
+        </Button>
+      </Box>
     </AppPage>
   );
 }

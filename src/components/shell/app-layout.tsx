@@ -1,5 +1,6 @@
 'use client';
 
+import { Socials } from '../common';
 import { useEffect, useState } from 'react';
 import { AppShell, Center, Loader } from '@mantine/core';
 
@@ -9,7 +10,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -38,6 +39,13 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
       )}
 
       {!loading && <AppShell.Main>{children}</AppShell.Main>}
+      {!loading && (
+        <AppShell.Footer withBorder={false}>
+          <Center mb='md'>
+            <Socials />
+          </Center>
+        </AppShell.Footer>
+      )}
     </AppShell>
   );
 };

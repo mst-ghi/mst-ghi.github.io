@@ -5,12 +5,4 @@ export const ThemeObject: MantineThemeOverride = {
   black: '#15161A',
   white: '#f9f9f9',
   defaultRadius: 'md',
-  other: {},
-  components: {
-    Button: {
-      defaultProps: {
-        variant: 'light',
-      },
-    },
-  },
 };

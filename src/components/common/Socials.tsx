@@ -31,7 +31,7 @@ const Socials = () => {
         variant='outline'
         component={Link}
         target='_blank'
-        href={'https://t.me/@mostafa_ghi'}
+        href={'https://t.me/mostafa_ghi'}
       >
         <IconBrandTelegram size={26} stroke={1.5} />
       </ActionIcon>

@@ -51,7 +51,7 @@ export const personJsonLd = {
     startDate: "2016",
     occupationalCategory: "Software Development",
   },
-  workExperienceYears: "+8",
+  // workExperienceYears: "+8",
 };
 
 export const websiteJsonLd = {

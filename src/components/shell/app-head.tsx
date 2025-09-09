@@ -1,5 +1,6 @@
-import { AppData } from '@/data';
 import Script from 'next/script';
+import { AppData } from '@/data';
+import {personJsonLd, websiteJsonLd} from '@/utils/jsonld';
 
 const AppHead = () => {
   return (
@@ -22,6 +23,15 @@ const AppHead = () => {
       <meta name='twitter:image' content='https://mst-ghi.github.io/preview.png' />
       <meta name='twitter:description' content={AppData.description} />
       <link rel='icon' href='/logo-circle.png' type='image/x-png' />
+       <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        {/* JSON-LD for WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
       <Script src='/js/google-tags.js' />
       <Script src='/js/welcome.js' />
     </head>

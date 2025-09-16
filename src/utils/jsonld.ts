@@ -10,6 +10,7 @@ export const personJsonLd = {
 	description:
 		"I have 8+ years of experience in backend development with PHP and Node.js, using frameworks such as Laravel and NestJS, and frontend development with Vue, Nuxt, React, and Next.js. For the past three years, I have concentrated on building applications with NestJS and Next.js.",
 	url: "https://mst-ghi.github.io/",
+	image: "https://mst-ghi.github.io/me-square.png",
 	address: {
 		"@type": "PostalAddress",
 		addressLocality: "Esfahan",

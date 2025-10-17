@@ -3,8 +3,8 @@
 import { AppData } from '@/data';
 import { useMediaQueries } from '@/hooks';
 import { AppPage } from '@/components/shell';
-import { TypeAnimation } from 'react-type-animation';
 import { Anchor, Flex, Text } from '@mantine/core';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function HomePage() {
 	const { isMobile, isDesktop } = useMediaQueries();

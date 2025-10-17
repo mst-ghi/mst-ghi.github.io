@@ -1,4 +1,4 @@
-@import './bg.css';
+@import "./bg.css";
 
 body {
   overflow-y: hidden;
@@ -10,10 +10,15 @@ a {
   font-weight: 900 !important;
 }
 
-.mantine-Title-root{
+.mantine-Title-root {
   font-family: inherit;
 }
 
 .mantine-Card-root {
   border-left: 6px solid #f9f9f999;
+}
+
+iframe {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
 }

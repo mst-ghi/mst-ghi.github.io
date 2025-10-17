@@ -1,0 +1,108 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["src/**/*", "!**/dist", "!**/out", "!**/.next"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "formatWithErrors": false
+  },
+  "css": {
+    "formatter": {
+      "enabled": true,
+      "indentWidth": 2,
+      "lineWidth": 100
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "quoteProperties": "preserve"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentWidth": 2,
+      "lineWidth": 72
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "off"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "useAltText": "off",
+        "noSvgWithoutTitle": "off",
+        "useKeyWithClickEvents": "off",
+        "noStaticElementInteractions": "off"
+      },
+      "complexity": {
+        "noBannedTypes": "off",
+        "useLiteralKeys": "off",
+        "noCommaOperator": "off",
+        "useOptionalChain": "off",
+        "noImportantStyles": "off",
+        "noUselessFragments": "off"
+      },
+      "performance": {
+        "noAccumulatingSpread": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "style": {
+        "useTemplate": "off",
+        "noHeadElement": "off",
+        "useImportType": "off",
+        "noNonNullAssertion": "off",
+        "useNodejsImportProtocol": "off"
+      },
+      "suspicious": {
+        "noGlobalIsNan": "off",
+        "noExplicitAny": "off",
+        "noThenProperty": "off",
+        "noDoubleEquals": "off",
+        "noArrayIndexKey": "off",
+        "noDocumentCookie": "off",
+        "noGlobalIsFinite": "off",
+        "noAssignInExpressions": "off",
+        "noTemplateCurlyInString": "off",
+        "noShadowRestrictedNames": "off",
+        "useIterableCallbackReturn": "off"
+      },
+      "correctness": {
+        "noUnreachable": "off",
+        "noUnusedImports": "off",
+        "noUnusedVariables": "off",
+        "useUniqueElementIds": "off",
+        "noConstantCondition": "off",
+        "noInnerDeclarations": "off",
+        "useJsxKeyInIterable": "off",
+        "noUnknownPseudoClass": "off",
+        "noUnknownTypeSelector": "off",
+        "useExhaustiveDependencies": "off",
+        "noUnusedFunctionParameters": "off"
+      }
+    }
+  }
+}

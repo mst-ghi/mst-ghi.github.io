@@ -14,6 +14,9 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
       <ColorSchemeScript forceColorScheme='dark' />
       <MantineProvider forceColorScheme='dark' theme={ThemeObject}>
         <AppLayout>{children}</AppLayout>
+        {Array.from({ length: 24 }).map((e, idx) => (
+          <div key={`firefly-${idx}`} className='firefly' />
+        ))}
       </MantineProvider>
     </Suspense>
   );

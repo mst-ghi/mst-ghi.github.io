@@ -1,20 +1,9 @@
 'use client';
 
 import { Socials } from '../common';
-import { useEffect, useState } from 'react';
-import { AppShell, Center, Loader } from '@mantine/core';
+import { AppShell, Center } from '@mantine/core';
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <AppShell
       pos='relative'
@@ -22,30 +11,19 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         main: {
           padding: 16,
           height: '100dvh',
+          width: '100dvw',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
         },
       }}
     >
-      {Array.from({ length: 16 }).map((e, idx) => (
-        <div key={`firefly-${idx}`} className='firefly' />
-      ))}
-
-      {loading && (
-        <Center h='100dvh' pos='absolute' left={0} top={0} right={0} bottom={0}>
-          <Loader color='white' size='sm' />
+      <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Footer withBorder={false}>
+        <Center mb='md'>
+          <Socials />
         </Center>
-      )}
-
-      {!loading && <AppShell.Main>{children}</AppShell.Main>}
-      {!loading && (
-        <AppShell.Footer withBorder={false}>
-          <Center mb='md'>
-            <Socials />
-          </Center>
-        </AppShell.Footer>
-      )}
+      </AppShell.Footer>
     </AppShell>
   );
 };

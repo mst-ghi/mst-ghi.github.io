@@ -1,45 +1,40 @@
 'use client';
 
 import Link from 'next/link';
+import { IconArrowLeft, IconArrowUpRight } from '@tabler/icons-react';
 import { AppPosts } from '@/data';
-import { AppPage } from '@/components/shell';
-import { Button, Card, Flex, ScrollArea, Text } from '@mantine/core';
 
 export default function PostsPage() {
-	return (
-		<AppPage>
-			<ScrollArea
-				pb={68}
-				styles={{
-					root: {
-						height: 'calc(100vh - 24px)',
-					},
-					content: {
-						display: 'flex',
-						flexDirection: 'column',
-						gap: '24px',
-					},
-				}}
-			>
-				{AppPosts.map((post, idx) => {
-					return (
-						<Card key={idx + post.id}>
-							<Flex gap='xs' direction={'column'}>
-								<Text fw={700}>{post.title}</Text>
-								<Text fw={400} size='sm'>
-									{post.content}
-								</Text>
-							</Flex>
+  return (
+    <section className='section' style={{ paddingTop: 140 }}>
+      <div className='container'>
+        <Link href='/' className='btn btn--sm' style={{ display: 'inline-flex', marginBottom: 28 }}>
+          <IconArrowLeft size={16} stroke={2} />
+          Back to home
+        </Link>
 
-							<Flex direction={'row'} justify={'flex-end'} mt='md' w='100%'>
-								<Button component={Link} target='_blank' w={148} href={post.link}>
-									See Detail
-								</Button>
-							</Flex>
-						</Card>
-					);
-				})}
-			</ScrollArea>
-		</AppPage>
-	);
+        <div className='section-head'>
+          <span className='eyebrow'>Writing</span>
+          <h1 className='section-title'>
+            All <span className='gradient-text'>posts</span>
+          </h1>
+        </div>
+
+        <div className='posts-grid'>
+          {AppPosts.map((post) => (
+            <article key={post.id} className='post-card'>
+              <h3 className='post-title'>{post.title}</h3>
+              <p className='post-content'>{post.content}</p>
+              <div className='project-links' style={{ marginTop: 'auto' }}>
+                <a href={post.link} target='_blank' rel='noreferrer' className='project-link'>
+                  Read post
+                  <IconArrowUpRight size={14} stroke={2.2} />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

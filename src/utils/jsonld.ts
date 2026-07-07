@@ -22,6 +22,12 @@ export const personJsonLd = {
     'https://www.linkedin.com/in/mst-ghi/',
   ],
   knowsAbout: [
+    'Golang',
+    'Gin',
+    'Gorm',
+    'Atlas',
+    'Bob',
+    'OpenTelemetry',
     'Node.js',
     'NestJS',
     'TypeORM',

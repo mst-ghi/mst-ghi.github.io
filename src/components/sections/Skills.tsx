@@ -1,6 +1,6 @@
 'use client';
 
-import { IconServer2, IconLayoutGrid, IconCode } from '@tabler/icons-react';
+import { IconServer2, IconLayoutGrid, IconCode, IconBrandGolang } from '@tabler/icons-react';
 import { AppSkills } from '@/data';
 import { Reveal } from '@/components/common';
 
@@ -8,6 +8,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; stroke?: numb
   server: IconServer2,
   layout: IconLayoutGrid,
   code: IconCode,
+  go: IconBrandGolang,
 };
 
 const Skills = () => {

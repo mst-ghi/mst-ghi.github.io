@@ -1,8 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { IconMenu2, IconX, IconArrowUpRight } from '@tabler/icons-react';
 import { AppData } from '@/data';
+import { ThemeToggle } from '@/components/common';
 
 const LINKS = [
   { label: 'About', href: '#about' },
@@ -45,7 +47,9 @@ const Navbar = () => {
     <nav className='nav'>
       <div className={`nav__inner ${scrolled ? 'is-scrolled' : ''}`}>
         <a href='#top' className='nav__brand' aria-label='Home'>
-          <span className='nav__brand-badge'>MG</span>
+          <span className='brand-avatar'>
+            <Image src='/me-square.png' alt={AppData.name} width={36} height={36} />
+          </span>
           <span>mst-ghi</span>
         </a>
 
@@ -62,6 +66,7 @@ const Navbar = () => {
         </div>
 
         <div className='nav__right'>
+          <ThemeToggle />
           <a
             href={AppData.resume}
             target='_blank'

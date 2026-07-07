@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { IconMail, IconArrowUpRight, IconPhone } from '@tabler/icons-react';
 import { AppData } from '@/data';
 import { Reveal, SocialLinks } from '@/components/common';
@@ -42,11 +43,13 @@ const Contact = () => {
       <footer className='footer'>
         <div className='container footer__inner'>
           <div className='footer__brand'>
-            <span className='nav__brand-badge'>MG</span>
+            <span className='brand-avatar'>
+              <Image src='/me-square.png' alt={AppData.name} width={36} height={36} />
+            </span>
             {AppData.name}
           </div>
           <span className='footer__meta'>
-            © {new Date().getFullYear()} · Built with Next.js &amp; Mantine · {AppData.address}
+            © {new Date().getFullYear()} {AppData.name} · Built with Next.js &amp; Mantine
           </span>
         </div>
       </footer>

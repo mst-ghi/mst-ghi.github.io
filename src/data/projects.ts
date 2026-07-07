@@ -18,8 +18,8 @@ export const AppProjects: Project[] = [
     category: 'Multi Web-App Platform',
     featured: true,
     description:
-      'A multi-web-app platform (Next.js landing, React + Vite client & admin dashboards) that aggregates ride, delivery, and food services, letting users compare the fastest, cheapest, and most available options in one place.',
-    stack: ['Next.js', 'React', 'Vite', 'MUI', 'Tailwind CSS', 'Turborepo'],
+      'A multi-web-app platform aggregating ride, delivery, and food services so users can compare the fastest, cheapest, and most available options in one place. Golang (Gin) backend with Swagger, Redis, Atlas, Bob, and OpenTelemetry; Turborepo frontend (Next.js landing, React + Vite client & admin dashboards).',
+    stack: ['Golang', 'Gin', 'OpenTelemetry', 'Next.js', 'React', 'Vite', 'Turborepo'],
     links: [
       { label: 'allingo.vn', url: 'https://allingo.vn/' },
       { label: 'admin', url: 'https://admin.allingo.vn/' },

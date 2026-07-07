@@ -5,6 +5,9 @@ const nextConfig = {
 	output: 'export',
 	devIndicators: false,
 	reactStrictMode: true,
+	images: {
+		unoptimized: true,
+	},
 };
 
 export default nextConfig;

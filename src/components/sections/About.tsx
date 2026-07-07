@@ -18,6 +18,12 @@ const About = () => {
           <div className='about-grid'>
             <Reveal className='about-card'>
               <p>{AppData.description}</p>
+              <p>
+                Over the last two years I&apos;ve been deepening my Golang expertise through
+                hands-on test projects, and I now build production backend services in Go (Gin) with
+                Swagger, Redis, Atlas migrations, Bob, and OpenTelemetry — currently powering the
+                backend at AllinGo alongside a Turborepo frontend.
+              </p>
               <p style={{ marginBottom: 0 }}>
                 I care deeply about developer experience, scalable architecture, and delightful UI —
                 bringing trendy, motion-rich interfaces to life while keeping the codebase

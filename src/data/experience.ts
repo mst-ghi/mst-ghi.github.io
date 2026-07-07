@@ -13,11 +13,12 @@ export const AppExperience: Experience[] = [
     type: 'Full-time',
     current: true,
     points: [
-      'Managing a Turborepo monorepo of multiple web apps and shared UI component libraries in a unified codebase',
+      'Building Golang backend services (Gin) with Swagger/OpenAPI docs, Redis, and OpenTelemetry-based observability',
+      'Managing database schema and migrations with Atlas and type-safe SQL access via Bob',
+      'Owning the Turborepo monorepo of multiple web apps and shared UI component libraries',
       'Built customer-facing apps and dashboards with React, Vite, and Next.js',
-      'Implemented consistent, scalable UI with MUI and Tailwind CSS',
-      'Handled global state with Zustand and secure cross-app auth via shared cookies',
-      'Applied Atomic Design and feature-based component architecture for modular, maintainable UI',
+      'Implemented consistent, scalable UI with MUI and Tailwind CSS, global state with Zustand, and secure cross-app auth via shared cookies',
+      'Applied Atomic Design and feature-based architecture for modular, maintainable UI',
     ],
   },
   {

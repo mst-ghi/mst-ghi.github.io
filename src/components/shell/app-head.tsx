@@ -8,6 +8,14 @@ const AppHead = () => {
       <title>Mostafa Gholami (mst-ghi)</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta name='theme-color' content='#0a0b0d' />
+      {/* Set theme before paint to avoid flash of incorrect theme */}
+      <script
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: inline theme bootstrap
+        dangerouslySetInnerHTML={{
+          __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
+        }}
+      />
       <meta name='author' content={AppData.name} />
       <meta name='description' content={AppData.description} />
       <meta property='og:type' content='website' />

@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { IconArrowUpRight, IconMail } from '@tabler/icons-react';
 import { AppData } from '@/data';
@@ -55,23 +54,6 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className='hero__visual'>
-            <div className='avatar-wrap'>
-              <div className='avatar-ring' />
-              <div className='avatar-img'>
-                <Image src='/me-square.png' alt={AppData.name} width={400} height={400} priority />
-              </div>
-              <div className='avatar-chip avatar-chip--1'>
-                <span className='emoji'>⚡</span> 8+ yrs
-              </div>
-              <div className='avatar-chip avatar-chip--2'>
-                <span className='emoji'>🧩</span> Fullstack
-              </div>
-              <div className='avatar-chip avatar-chip--3'>
-                <span className='emoji'>🚀</span> Next.js
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </header>

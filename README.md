@@ -1,5 +1,14 @@
-# 👋 Hi there I'm mostafa (mst-ghi) ![GitHub followers](https://img.shields.io/github/followers/mst-ghi)
+# 👋 Hi there, I'm Mostafa (mst-ghi) ![GitHub followers](https://img.shields.io/github/followers/mst-ghi)
 
-⚡ I have +8 years of experience in backend development with <b>PHP</b> and <b>Node.js</b>, utilizing frameworks such as <b>Laravel</b> and <b>NestJS</b>, as well as frontend development with <b>Vue</b>, <b>Nuxt</b>, <b>React</b>, and <b>Next.js</b>.
-<br><br>⚡ For the past three years, I have focused on building applications with <b>NestJS</b>, <b>Next.js</b>, and <b>Go</b>, further honing my expertise in both backend and frontend technologies.
-<br><br>⚡ Additionally, I have a strong background in <b><a href="https://en.wikipedia.org/wiki/Multitenancy" target="_blank">multitenant projects</a></b>, <b><a href="https://en.wikipedia.org/wiki/Microservices" target="_blank">microservices architecture</a></b>, <b><a href="https://kafka.apache.org/" target="_blank">Kafka</a></b>, <b><a href="https://en.wikipedia.org/wiki/Socket_programming" target="_blank">socket programming</a></b>, <b><a href="https://turbo.build/repo" target="_blank">Turborepo</a></b>, caching strategies, and queue management.
+**Senior Full-Stack Developer | NestJS • Next.js • Turborepo**
+
+⚡ I'm a Senior Full-Stack Developer with **9+ years of experience** designing and building scalable web platforms using **NestJS**, **Next.js**, **Golang**, and **Turborepo**.
+<br><br>⚡ I specialize in **monorepo architectures**, **multi-tenant systems**, **real-time features**, and clean, maintainable codebases — and I have experience in mobile development with **React Native**. I've delivered complex products from architecture to production for startups and established companies.
+<br><br>⚡ My core stack includes **NestJS**, **Node.js**, **Golang**, **Next.js**, **React**, **TypeScript**, and **Turborepo**, with **Prisma** / **TypeORM**, **Redis**, **Socket.IO**, **Kafka**, and **microservices** on the backend, and **React Query**, **Zustand**, **Mantine UI**, **Material UI**, and **Tailwind CSS** on the frontend.
+
+## 🔗 Links
+
+- Portfolio: [mst-ghi.github.io](https://mst-ghi.github.io)
+- LinkedIn: [linkedin.com/in/mst-ghi](https://linkedin.com/in/mst-ghi)
+- Telegram: [@mostafa_ghi](https://t.me/mostafa_ghi)
+- Email: [mostafagholamidev@gmail.com](mailto:mostafagholamidev@gmail.com)

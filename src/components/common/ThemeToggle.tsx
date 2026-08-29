@@ -17,6 +17,8 @@ const ThemeToggle = () => {
     const next: Theme = theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
     document.documentElement.setAttribute('data-theme', next);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', next === 'light' ? '#f4f5fa' : '#0a0b0d');
     try {
       localStorage.setItem('theme', next);
     } catch {

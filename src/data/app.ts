@@ -1,16 +1,15 @@
-const experienceYear = '+8';
+const experienceYear = '+9';
 
 export const AppData = {
   name: 'Mostafa Gholami',
   email: 'mostafagholamidev@gmail.com',
   phone: '+989365895522',
-  address: 'Isfahan, Iran',
+  address: 'Tehran, Iran',
   nickname: 'mst-ghi',
   birthday: 'April 2, 1993',
-  headline: 'Senior Fullstack Developer',
-  subHeadline: 'Frontend Focused',
+  headline: 'Senior Full-Stack Developer',
   resume: '/MostafaGholami-Resume.pdf',
-  description: `Software engineer with ${experienceYear} years of experience building scalable web applications with Node.js, NestJS, React, and Next.js. Focused on both backend and frontend development, with strong expertise in clean code, feature-driven design, shared libraries, socket programming, caching, queue management, and Turborepo-based monorepos. Dedicated to delivering maintainable and high-performance solutions.`,
+  description: `Senior Full-Stack Developer with ${experienceYear} years of experience designing and building scalable web platforms with NestJS, Next.js, Golang, and Turborepo. Specialized in monorepo architectures, multi-tenant systems, real-time features, and clean, maintainable codebases — with mobile experience in React Native. Delivering complex products from architecture to production for startups and established companies.`,
   experienceYear,
   site: 'https://mst-ghi.github.io/',
   headlineStacks: [
@@ -21,7 +20,7 @@ export const AppData = {
     'Clean Code · Atomic Design · Type-safe Development',
   ],
   stats: [
-    { value: '8+', label: 'Years of Experience' },
+    { value: '9+', label: 'Years of Experience' },
     { value: '20+', label: 'Projects Delivered' },
     { value: '10+', label: 'Companies & Teams' },
     { value: '2', label: 'Open Source Hubs' },

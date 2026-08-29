@@ -23,9 +23,7 @@ const Hero = () => {
               <span className='gradient-text'>Mostafa Gholami</span>
             </h1>
 
-            <p className='hero__role'>
-              {AppData.headline} <span className='accent'>· {AppData.subHeadline}</span>
-            </p>
+            <p className='hero__role'>{AppData.headline}</p>
 
             <TypeAnimation
               sequence={sequence}

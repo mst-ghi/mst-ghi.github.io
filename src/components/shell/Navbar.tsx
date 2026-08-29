@@ -11,7 +11,9 @@ const LINKS = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Open Source', href: '#opensource' },
   { label: 'Writing', href: '#writing' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 const Navbar = () => {

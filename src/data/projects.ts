@@ -31,8 +31,8 @@ export const AppProjects: Project[] = [
     category: 'Social & Commerce',
     featured: true,
     description:
-      'A social media platform to help users achieve business goals and enhance visibility. Backend built on a Java microservices architecture; frontend with Turborepo and Next.js. Features a store, social system, chat, online sessions & classes, management sections, and a website builder.',
-    stack: ['Next.js', 'Turborepo', 'Java', 'Microservices'],
+      'A social media platform to help users achieve business goals and enhance visibility. Backend built on a microservices architecture; frontend with Turborepo and Next.js. Features a store, social system, chat, online sessions & classes, management sections, and a website builder.',
+    stack: ['Next.js', 'Turborepo', 'Microservices'],
     links: [
       { label: 'seller', url: 'https://seller.avidbizz.com' },
       { label: 'backoffice', url: 'https://backoffice.avidbizz.com/' },

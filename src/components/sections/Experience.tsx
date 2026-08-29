@@ -1,6 +1,6 @@
 'use client';
 
-import { AppExperience } from '@/data';
+import { AppData, AppExperience } from '@/data';
 import { Reveal } from '@/components/common';
 
 const Experience = () => {
@@ -13,8 +13,8 @@ const Experience = () => {
             Work <span className='gradient-text'>experience</span>
           </h2>
           <p className='section-sub'>
-            8+ years shipping products across startups and agencies — from microservices backends to
-            design-system-driven frontends.
+            {AppData.experienceYear} years shipping products across startups and agencies — from
+            microservices backends to design-system-driven frontends.
           </p>
         </Reveal>
 

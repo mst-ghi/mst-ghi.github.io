@@ -518,10 +518,6 @@ a {
   padding-bottom: 60px;
 }
 .hero__grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
-  align-items: center;
   width: 100%;
 }
 .hero__badge {
@@ -591,7 +587,7 @@ a {
 .hero__desc {
   color: var(--text-dim);
   font-size: 16px;
-  max-width: 520px;
+  max-width: 720px;
   margin: 0 0 30px;
 }
 .hero__actions {
@@ -603,93 +599,6 @@ a {
 .hero__socials {
   display: flex;
   gap: 10px;
-}
-
-/* Hero avatar */
-.hero__visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.avatar-wrap {
-  position: relative;
-  width: min(360px, 80%);
-  aspect-ratio: 1;
-}
-.avatar-ring {
-  position: absolute;
-  inset: -14px;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, var(--pink), var(--blue), var(--purple), var(--pink));
-  filter: blur(2px);
-  opacity: 0.85;
-  animation: spin 8s linear infinite;
-  z-index: 0;
-}
-.avatar-ring::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border-radius: 50%;
-  background: var(--bg);
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.avatar-img {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--border-strong);
-  background: var(--bg-2);
-}
-.avatar-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.avatar-chip {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 14px;
-  border-radius: 14px;
-  background: var(--glass-bg-strong);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-  font-size: 13px;
-  font-weight: 600;
-  box-shadow: var(--shadow-card);
-  animation: floatChip 5s var(--ease) infinite alternate;
-}
-.avatar-chip .emoji {
-  font-size: 16px;
-}
-.avatar-chip--1 {
-  top: 6%;
-  left: -8%;
-}
-.avatar-chip--2 {
-  bottom: 12%;
-  right: -10%;
-  animation-delay: 1.5s;
-}
-.avatar-chip--3 {
-  bottom: -4%;
-  left: 8%;
-  animation-delay: 0.8s;
-}
-@keyframes floatChip {
-  to {
-    transform: translateY(-12px);
-  }
 }
 
 /* ============================================================
@@ -1342,14 +1251,7 @@ a {
    ============================================================ */
 @media (max-width: 960px) {
   .hero__grid {
-    grid-template-columns: 1fr;
     gap: 40px;
-  }
-  .hero__visual {
-    order: -1;
-  }
-  .avatar-wrap {
-    width: min(280px, 70%);
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -1389,12 +1291,6 @@ a {
   .about-card,
   .contact-card {
     padding: 28px 22px;
-  }
-  .avatar-chip--1 {
-    left: 0;
-  }
-  .avatar-chip--2 {
-    right: 0;
   }
 }
 

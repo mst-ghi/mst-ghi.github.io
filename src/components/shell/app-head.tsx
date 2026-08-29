@@ -12,14 +12,13 @@ const AppHead = () => {
       {/* Set theme before paint to avoid flash of incorrect theme */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
+          __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute('content',t==='light'?'#f4f5fa':'#0a0b0d');}}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
         }}
       />
       <meta name='author' content={AppData.name} />
       <meta name='description' content={AppData.description} />
       <meta property='og:type' content='website' />
       <meta property='og:title' content={AppData.name} />
-      <meta property='og:determiner' content={AppData.name} />
       <meta property='og:url' content='https://mst-ghi.github.io/' />
       <meta property='og:image' content='https://mst-ghi.github.io/preview.png' />
       <meta property='og:image:secure_url' content='https://mst-ghi.github.io/preview.png' />

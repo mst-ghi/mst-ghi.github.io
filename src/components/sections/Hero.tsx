@@ -53,7 +53,6 @@ const Hero = () => {
               <SocialLinks />
             </div>
           </div>
-
         </div>
       </div>
     </header>

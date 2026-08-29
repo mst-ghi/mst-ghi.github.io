@@ -32,7 +32,7 @@ export const AppData = {
   },
   languages: [
     { name: 'Persian', level: 'Native' },
-    { name: 'English', level: 'Professional' },
+    { name: 'English', level: 'B1 — Intermediate' },
   ],
   socials: {
     github: 'https://github.com/mst-ghi',

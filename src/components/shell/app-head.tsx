@@ -11,7 +11,6 @@ const AppHead = () => {
       <meta name='theme-color' content='#0a0b0d' />
       {/* Set theme before paint to avoid flash of incorrect theme */}
       <script
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: inline theme bootstrap
         dangerouslySetInnerHTML={{
           __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
         }}

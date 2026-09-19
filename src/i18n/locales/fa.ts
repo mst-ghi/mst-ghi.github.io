@@ -21,8 +21,10 @@ export const fa: Dictionary = {
   hero: {
     badge: 'آماده همکاری‌های جدید',
     hi: 'سلام، من',
+    pitch:
+      'پلتفرم‌های وب مقیاس‌پذیر را از معماری تا پروداکشن می‌سازم — برای استارتاپ‌ها و شرکت‌های تثبیت‌شده.',
     viewWork: 'نمونه‌کارها',
-    getInTouch: 'ارتباط با من',
+    workWithMe: 'همکاری با من',
   },
   about: {
     eyebrow: 'درباره من',
@@ -365,6 +367,8 @@ export const fa: Dictionary = {
     titleBefore: 'بیا با هم چیزی',
     titleAccent: 'عالی بسازیم',
     sub: 'برای نقش تمام‌وقت، پروژه فریلنس و همکاری آماده‌ام. پیام بگذارید، به‌زودی پاسخ می‌دهم.',
+    telegram: 'تلگرام',
+    linkedin: 'لینکدین',
     footerBuilt: 'ساخته‌شده با Next.js و Mantine',
   },
   resume: {

@@ -19,8 +19,10 @@ export const en = {
   hero: {
     badge: 'Available for new opportunities',
     hi: "Hi, I'm",
+    pitch:
+      'I build scalable web platforms from architecture to production — for startups and established companies.',
     viewWork: 'View my work',
-    getInTouch: 'Get in touch',
+    workWithMe: 'Work with me',
   },
   about: {
     eyebrow: 'About me',
@@ -366,6 +368,8 @@ export const en = {
     titleBefore: "Let's build something",
     titleAccent: 'great',
     sub: "I'm open to full-time roles, freelance projects, and collaborations. Drop me a line and I'll get back to you soon.",
+    telegram: 'Telegram',
+    linkedin: 'LinkedIn',
     footerBuilt: 'Built with Next.js & Mantine',
   },
   resume: {

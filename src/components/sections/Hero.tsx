@@ -27,6 +27,8 @@ const Hero = () => {
 
             <p className='hero__role'>{t.headline}</p>
 
+            <p className='hero__pitch'>{t.hero.pitch}</p>
+
             <TypeAnimation
               key={locale}
               sequence={sequence}
@@ -46,7 +48,7 @@ const Hero = () => {
               </a>
               <a href={`mailto:${AppData.email}`} className='btn'>
                 <IconMail size={18} stroke={1.8} />
-                {t.hero.getInTouch}
+                {t.hero.workWithMe}
               </a>
               <ResumeLinks />
             </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { IconMail, IconPhone } from '@tabler/icons-react';
+import { IconBrandLinkedin, IconBrandTelegram, IconMail, IconPhone } from '@tabler/icons-react';
 import { AppData } from '@/data';
 import { useI18n } from '@/i18n';
 import { Reveal, ResumeLinks, SocialLinks } from '@/components/common';
@@ -27,6 +27,14 @@ const Contact = () => {
             <a href={`tel:${AppData.phone}`} className='btn'>
               <IconPhone size={18} stroke={1.8} />
               {AppData.phone}
+            </a>
+            <a href={AppData.socials.telegram} target='_blank' rel='noreferrer' className='btn'>
+              <IconBrandTelegram size={18} stroke={1.8} />
+              {t.contact.telegram}
+            </a>
+            <a href={AppData.socials.linkedin} target='_blank' rel='noreferrer' className='btn'>
+              <IconBrandLinkedin size={18} stroke={1.8} />
+              {t.contact.linkedin}
             </a>
             <ResumeLinks />
           </div>

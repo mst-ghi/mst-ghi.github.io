@@ -13,7 +13,7 @@ export const personJsonLd = {
   image: 'https://mst-ghi.github.io/me-square.png',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Tehran',
+    addressLocality: 'Isfahan',
     addressCountry: 'Iran',
   },
   sameAs: [

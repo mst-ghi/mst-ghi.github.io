@@ -1,61 +1,59 @@
 'use client';
 
-import { AppData, MarqueeSkills } from '@/data';
+import { MarqueeSkills } from '@/data';
+import { useI18n } from '@/i18n';
 import { Reveal } from '@/components/common';
 
 const About = () => {
+  const { t } = useI18n();
+  const stats = [
+    { value: '9+', label: t.stats.experience },
+    { value: '20+', label: t.stats.projects },
+    { value: '10+', label: t.stats.companies },
+    { value: '2', label: t.stats.opensource },
+  ];
+
   return (
     <>
       <section id='about' className='section'>
         <div className='container'>
           <Reveal className='section-head'>
-            <span className='eyebrow'>About me</span>
+            <span className='eyebrow'>{t.about.eyebrow}</span>
             <h2 className='section-title'>
-              Turning complex problems into <span className='gradient-text'>clean products</span>
+              {t.about.titleBefore} <span className='gradient-text'>{t.about.titleAccent}</span>
             </h2>
           </Reveal>
 
           <div className='about-grid'>
             <Reveal className='about-card'>
-              <p>{AppData.description}</p>
-              <p>
-                Over the last couple of years I&apos;ve been deepening my Golang expertise, and I
-                now build production backend services in Go (Gin) with Swagger, Redis, Atlas
-                migrations, Bob, and OpenTelemetry — currently powering the backend at AllinGo
-                alongside a Turborepo frontend.
-              </p>
-              <p style={{ marginBottom: 0 }}>
-                I care deeply about developer experience, scalable architecture, and delightful UI —
-                bringing motion-rich interfaces to life while keeping the codebase maintainable
-                across large monorepos.
-              </p>
+              <p>{t.description}</p>
+              <p>{t.about.p2}</p>
+              <p style={{ marginBottom: 0 }}>{t.about.p3}</p>
             </Reveal>
 
             <Reveal className='about-facts' delay={120}>
               <div className='fact'>
-                <span className='fact__label'>Education</span>
+                <span className='fact__label'>{t.about.education}</span>
                 <span className='fact__value'>
-                  {AppData.education.degree}
+                  {t.about.degree}
                   <br />
-                  <small>{AppData.education.school}</small>
+                  <small>{t.about.school}</small>
                 </span>
               </div>
               <div className='fact'>
-                <span className='fact__label'>Based in</span>
-                <span className='fact__value'>{AppData.address}</span>
+                <span className='fact__label'>{t.about.basedIn}</span>
+                <span className='fact__value'>{t.about.address}</span>
               </div>
               <div className='fact'>
-                <span className='fact__label'>Languages</span>
-                <span className='fact__value'>
-                  {AppData.languages.map((l) => `${l.name} (${l.level})`).join(' · ')}
-                </span>
+                <span className='fact__label'>{t.about.languages}</span>
+                <span className='fact__value'>{t.about.spoken}</span>
               </div>
             </Reveal>
           </div>
 
           <Reveal>
             <div className='stats' style={{ marginTop: 24 }}>
-              {AppData.stats.map((stat) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className='stat'>
                   <div className='stat__value'>{stat.value}</div>
                   <div className='stat__label'>{stat.label}</div>
@@ -69,7 +67,7 @@ const About = () => {
       <div className='marquee' aria-hidden='true'>
         <div className='marquee__track'>
           {[...MarqueeSkills, ...MarqueeSkills].map((skill, idx) => (
-            <span key={idx} className='marquee__item'>
+            <span key={`${skill}-${idx}`} className='marquee__item'>
               {skill}
             </span>
           ))}

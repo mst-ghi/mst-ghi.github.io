@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import { AppData } from '@/data';
+import { langBootScript } from '@/i18n';
 import { personJsonLd, websiteJsonLd } from '@/utils/jsonld';
 
 const AppHead = () => {
@@ -9,10 +10,10 @@ const AppHead = () => {
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='theme-color' content='#0a0b0d' />
-      {/* Set theme before paint to avoid flash of incorrect theme */}
+      {/* Set theme + language from cookie before paint */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute('content',t==='light'?'#f4f5fa':'#0a0b0d');}}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`,
+          __html: `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute('content',t==='light'?'#f4f5fa':'#0a0b0d');}}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();${langBootScript}`,
         }}
       />
       <meta name='author' content={AppData.name} />

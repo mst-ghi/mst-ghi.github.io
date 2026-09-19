@@ -2,20 +2,22 @@
 
 import { IconBrandGithub, IconArrowUpRight } from '@tabler/icons-react';
 import { AppOpenSource } from '@/data';
+import { useI18n } from '@/i18n';
 import { Reveal } from '@/components/common';
 
 const OpenSource = () => {
+  const { t } = useI18n();
+
   return (
     <section id='opensource' className='section section--tight'>
       <div className='container'>
         <Reveal className='section-head'>
-          <span className='eyebrow'>Open source</span>
+          <span className='eyebrow'>{t.opensource.eyebrow}</span>
           <h2 className='section-title'>
-            Repositories &amp; <span className='gradient-text'>libraries</span>
+            {t.opensource.titleBefore}{' '}
+            <span className='gradient-text'>{t.opensource.titleAccent}</span>
           </h2>
-          <p className='section-sub'>
-            Reusable building blocks and reference projects — visit my GitHub to explore more.
-          </p>
+          <p className='section-sub'>{t.opensource.sub}</p>
         </Reveal>
 
         <div className='os-grid'>
@@ -27,7 +29,9 @@ const OpenSource = () => {
                 </span>
                 <span className='os-name'>{repo.name}</span>
               </div>
-              <p className='os-desc'>{repo.description}</p>
+              <p className='os-desc'>
+                {t.opensource.items[repo.name as keyof typeof t.opensource.items]}
+              </p>
               <div className='project-tags'>
                 {repo.stack.map((tech) => (
                   <span key={tech} className='tag'>
@@ -37,7 +41,7 @@ const OpenSource = () => {
               </div>
               <div className='project-links'>
                 <a href={repo.url} target='_blank' rel='noreferrer' className='project-link'>
-                  View on GitHub
+                  {t.opensource.viewGithub}
                   <IconArrowUpRight size={14} stroke={2.2} />
                 </a>
               </div>

@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { IconSun, IconMoon } from '@tabler/icons-react';
+import { useI18n } from '@/i18n';
 
 type Theme = 'dark' | 'light';
 
 const ThemeToggle = () => {
+  const { t } = useI18n();
   const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
@@ -31,8 +33,8 @@ const ThemeToggle = () => {
       type='button'
       className='icon-btn theme-toggle'
       onClick={toggle}
-      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-label={theme === 'dark' ? t.theme.light : t.theme.dark}
+      title={theme === 'dark' ? t.theme.light : t.theme.dark}
     >
       {theme === 'dark' ? <IconSun size={20} stroke={1.7} /> : <IconMoon size={20} stroke={1.7} />}
     </button>

@@ -1,4 +1,4 @@
-import { Inter, Fira_Code } from 'next/font/google';
+import { Inter, Fira_Code, Vazirmatn } from 'next/font/google';
 import { AppHead } from '@/components/shell';
 import AppProvider from '@/components/app-provider';
 
@@ -14,9 +14,19 @@ const firaCode = Fira_Code({
   display: 'swap',
 });
 
+const vazirmatn = Vazirmatn({
+  subsets: ['arabic', 'latin'],
+  variable: '--font-fa',
+  display: 'swap',
+});
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang='en' suppressHydrationWarning className={`${inter.variable} ${firaCode.variable}`}>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className={`${inter.variable} ${firaCode.variable} ${vazirmatn.variable}`}
+    >
       <AppHead />
       <body suppressHydrationWarning>
         <AppProvider>{children}</AppProvider>

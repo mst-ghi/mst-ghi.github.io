@@ -1,23 +1,23 @@
 'use client';
 
 import Image from 'next/image';
-import { IconMail, IconArrowUpRight, IconPhone } from '@tabler/icons-react';
+import { IconMail, IconPhone } from '@tabler/icons-react';
 import { AppData } from '@/data';
-import { Reveal, SocialLinks } from '@/components/common';
+import { useI18n } from '@/i18n';
+import { Reveal, ResumeLinks, SocialLinks } from '@/components/common';
 
 const Contact = () => {
+  const { t } = useI18n();
+
   return (
     <section id='contact' className='section'>
       <div className='container'>
         <Reveal className='contact-card'>
-          <span className='eyebrow'>Get in touch</span>
+          <span className='eyebrow'>{t.contact.eyebrow}</span>
           <h2 className='contact-title'>
-            Let&apos;s build something <span className='gradient-text'>great</span>
+            {t.contact.titleBefore} <span className='gradient-text'>{t.contact.titleAccent}</span>
           </h2>
-          <p className='contact-sub'>
-            I&apos;m open to full-time roles, freelance projects, and collaborations. Drop me a line
-            and I&apos;ll get back to you soon.
-          </p>
+          <p className='contact-sub'>{t.contact.sub}</p>
 
           <div className='contact-actions'>
             <a href={`mailto:${AppData.email}`} className='btn btn--primary'>
@@ -28,10 +28,7 @@ const Contact = () => {
               <IconPhone size={18} stroke={1.8} />
               {AppData.phone}
             </a>
-            <a href={AppData.resume} target='_blank' rel='noreferrer' className='btn'>
-              Resume
-              <IconArrowUpRight size={16} stroke={2.2} />
-            </a>
+            <ResumeLinks />
           </div>
 
           <div className='contact-socials'>
@@ -44,12 +41,12 @@ const Contact = () => {
         <div className='container footer__inner'>
           <div className='footer__brand'>
             <span className='brand-avatar'>
-              <Image src='/me-square.png' alt={AppData.name} width={36} height={36} />
+              <Image src='/me-square.png' alt={t.name} width={36} height={36} />
             </span>
-            {AppData.name}
+            {t.name}
           </div>
           <span className='footer__meta'>
-            © {new Date().getFullYear()} {AppData.name} · Built with Next.js &amp; Mantine
+            © {new Date().getFullYear()} {t.name} · {t.contact.footerBuilt}
           </span>
         </div>
       </footer>

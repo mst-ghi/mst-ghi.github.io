@@ -9,9 +9,8 @@ export interface Experience {
 export const AppExperience: Experience[] = [
   {
     company: 'AllinGo',
-    period: 'Aug 2025 — Present',
+    period: 'Aug 2025 — Aug 2026',
     type: 'Full-time',
-    current: true,
     points: [
       'Building Golang backend services (Gin) with Swagger/OpenAPI docs, Redis, and OpenTelemetry-based observability',
       'Managing database schema and migrations with Atlas and type-safe SQL access via Bob',

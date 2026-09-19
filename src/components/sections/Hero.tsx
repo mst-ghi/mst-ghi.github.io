@@ -3,9 +3,11 @@
 import { TypeAnimation } from 'react-type-animation';
 import { IconArrowUpRight, IconMail } from '@tabler/icons-react';
 import { AppData } from '@/data';
-import { SocialLinks } from '@/components/common';
+import { useI18n } from '@/i18n';
+import { ResumeLinks, SocialLinks } from '@/components/common';
 
 const Hero = () => {
+  const { locale, t } = useI18n();
   const sequence = AppData.headlineStacks.flatMap((s) => [s, 1800]);
 
   return (
@@ -15,17 +17,18 @@ const Hero = () => {
           <div>
             <span className='hero__badge'>
               <span className='dot' />
-              Available for new opportunities
+              {t.hero.badge}
             </span>
 
             <h1 className='hero__title'>
-              <span className='hi'>Hi, I&apos;m</span>
-              <span className='gradient-text'>Mostafa Gholami</span>
+              <span className='hi'>{t.hero.hi}</span>
+              <span className='gradient-text'>{t.name}</span>
             </h1>
 
-            <p className='hero__role'>{AppData.headline}</p>
+            <p className='hero__role'>{t.headline}</p>
 
             <TypeAnimation
+              key={locale}
               sequence={sequence}
               wrapper='span'
               cursor
@@ -34,17 +37,18 @@ const Hero = () => {
               speed={55}
             />
 
-            <p className='hero__desc'>{AppData.description}</p>
+            <p className='hero__desc'>{t.description}</p>
 
             <div className='hero__actions'>
               <a href='#projects' className='btn btn--primary'>
-                View my work
+                {t.hero.viewWork}
                 <IconArrowUpRight size={18} stroke={2.2} />
               </a>
               <a href={`mailto:${AppData.email}`} className='btn'>
                 <IconMail size={18} stroke={1.8} />
-                Get in touch
+                {t.hero.getInTouch}
               </a>
+              <ResumeLinks />
             </div>
 
             <div className='hero__socials'>

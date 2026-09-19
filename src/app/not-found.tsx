@@ -2,8 +2,11 @@
 
 import Link from 'next/link';
 import { IconArrowLeft } from '@tabler/icons-react';
+import { useI18n } from '@/i18n';
 
 export default function NotFoundPage() {
+  const { t, dir } = useI18n();
+
   return (
     <section
       className='section'
@@ -17,14 +20,18 @@ export default function NotFoundPage() {
           404
         </div>
         <h1 className='section-title' style={{ marginTop: 12 }}>
-          Page not found
+          {t.notFound.title}
         </h1>
         <p className='section-sub' style={{ margin: '0 auto 28px', maxWidth: 420 }}>
-          The page you&apos;re looking for doesn&apos;t exist or has been moved.
+          {t.notFound.body}
         </p>
         <Link href='/' className='btn btn--primary' style={{ display: 'inline-flex' }}>
-          <IconArrowLeft size={18} stroke={2.2} />
-          Back to home
+          <IconArrowLeft
+            size={18}
+            stroke={2.2}
+            style={dir === 'rtl' ? { transform: 'scaleX(-1)' } : undefined}
+          />
+          {t.notFound.back}
         </Link>
       </div>
     </section>

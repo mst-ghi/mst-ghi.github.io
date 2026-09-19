@@ -2,24 +2,30 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { IconMenu2, IconX, IconArrowUpRight } from '@tabler/icons-react';
-import { AppData } from '@/data';
-import { ThemeToggle } from '@/components/common';
+import { IconMenu2, IconX } from '@tabler/icons-react';
+import { useI18n } from '@/i18n';
+import { LanguageToggle, ThemeToggle } from '@/components/common';
 
-const LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Open Source', href: '#opensource' },
-  { label: 'Writing', href: '#writing' },
-  { label: 'Contact', href: '#contact' },
-];
+const LINK_HREFS = [
+  { key: 'about', href: '#about' },
+  { key: 'skills', href: '#skills' },
+  { key: 'experience', href: '#experience' },
+  { key: 'projects', href: '#projects' },
+  { key: 'opensource', href: '#opensource' },
+  { key: 'writing', href: '#writing' },
+  { key: 'contact', href: '#contact' },
+] as const;
 
 const Navbar = () => {
+  const { t } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('#about');
+
+  const links = LINK_HREFS.map((link) => ({
+    href: link.href,
+    label: t.nav[link.key],
+  }));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -29,7 +35,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const ids = LINKS.map((l) => l.href.slice(1));
+    const ids = LINK_HREFS.map((l) => l.href.slice(1));
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -48,15 +54,15 @@ const Navbar = () => {
   return (
     <nav className='nav'>
       <div className={`nav__inner ${scrolled ? 'is-scrolled' : ''}`}>
-        <a href='#top' className='nav__brand' aria-label='Home'>
+        <a href='#top' className='nav__brand' aria-label={t.nav.home}>
           <span className='brand-avatar'>
-            <Image src='/me-square.png' alt={AppData.name} width={36} height={36} />
+            <Image src='/me-square.png' alt={t.name} width={36} height={36} />
           </span>
           <span>mst-ghi</span>
         </a>
 
         <div className='nav__links'>
-          {LINKS.map((link) => (
+          {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -69,19 +75,12 @@ const Navbar = () => {
 
         <div className='nav__right'>
           <ThemeToggle />
-          <a
-            href={AppData.resume}
-            target='_blank'
-            rel='noreferrer'
-            className='btn btn--primary btn--sm nav__desktop-cta'
-          >
-            Resume
-            <IconArrowUpRight size={16} stroke={2.2} />
-          </a>
+          <LanguageToggle />
           <button
             type='button'
             className='nav__burger'
-            aria-label='Toggle menu'
+            aria-label={t.nav.menu}
+            aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <IconX size={20} /> : <IconMenu2 size={20} />}
@@ -91,7 +90,7 @@ const Navbar = () => {
 
       {open && (
         <div className='nav__mobile'>
-          {LINKS.map((link) => (
+          {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -101,17 +100,6 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href={AppData.resume}
-            target='_blank'
-            rel='noreferrer'
-            className='btn btn--primary btn--sm'
-            style={{ marginTop: 8 }}
-            onClick={() => setOpen(false)}
-          >
-            Download Resume
-            <IconArrowUpRight size={16} stroke={2.2} />
-          </a>
         </div>
       )}
     </nav>

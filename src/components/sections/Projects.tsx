@@ -2,6 +2,7 @@
 
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { AppProjects } from '@/data';
+import { useI18n } from '@/i18n';
 import { Reveal } from '@/components/common';
 
 const handleMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -12,57 +13,62 @@ const handleMove = (e: React.MouseEvent<HTMLElement>) => {
 };
 
 const Projects = () => {
+  const { t } = useI18n();
+
   return (
     <section id='projects' className='section'>
       <div className='container'>
         <Reveal className='section-head'>
-          <span className='eyebrow'>Selected work</span>
+          <span className='eyebrow'>{t.projects.eyebrow}</span>
           <h2 className='section-title'>
-            Featured <span className='gradient-text'>projects</span>
+            {t.projects.titleBefore} <span className='gradient-text'>{t.projects.titleAccent}</span>
           </h2>
-          <p className='section-sub'>
-            A selection of platforms, dashboards, and products I&apos;ve architected and built
-            end-to-end.
-          </p>
+          <p className='section-sub'>{t.projects.sub}</p>
         </Reveal>
 
         <div className='projects-grid'>
-          {AppProjects.map((project, idx) => (
-            <Reveal
-              key={project.name}
-              delay={(idx % 2) * 90}
-              onMouseMove={handleMove}
-              className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
-            >
-              <div className='project-top'>
-                <span className='project-cat'>{project.category}</span>
-                {project.featured && <span className='project-star'>★ Featured</span>}
-              </div>
-              <h3 className='project-name'>{project.name}</h3>
-              <p className='project-desc'>{project.description}</p>
-              <div className='project-tags'>
-                {project.stack.map((tech) => (
-                  <span key={tech} className='tag'>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className='project-links'>
-                {project.links.map((link) => (
-                  <a
-                    key={link.url}
-                    href={link.url}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='project-link'
-                  >
-                    {link.label}
-                    <IconArrowUpRight size={14} stroke={2.2} />
-                  </a>
-                ))}
-              </div>
-            </Reveal>
-          ))}
+          {AppProjects.map((project, idx) => {
+            const copy = t.projects.items[project.name as keyof typeof t.projects.items];
+            return (
+              <Reveal
+                key={project.name}
+                delay={(idx % 2) * 90}
+                onMouseMove={handleMove}
+                className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
+              >
+                <div className='project-top'>
+                  <span className='project-cat'>{copy.category}</span>
+                  {project.featured && (
+                    <span className='project-star'>★ {t.projects.featured}</span>
+                  )}
+                </div>
+                <h3 className='project-name'>{copy.name}</h3>
+                <p className='project-desc'>{copy.description}</p>
+                <div className='project-tags'>
+                  {project.stack.map((tech) => (
+                    <span key={tech} className='tag'>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className='project-links'>
+                  {project.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='project-link'
+                    >
+                      {t.projects.linkLabels[link.label as keyof typeof t.projects.linkLabels] ??
+                        link.label}
+                      <IconArrowUpRight size={14} stroke={2.2} />
+                    </a>
+                  ))}
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

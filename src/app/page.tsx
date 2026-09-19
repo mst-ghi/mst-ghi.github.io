@@ -2,6 +2,8 @@ import {
   Hero,
   About,
   Skills,
+  VibeCoding,
+  SoftSkills,
   Experience,
   Projects,
   OpenSource,
@@ -15,6 +17,8 @@ export default function HomePage() {
       <Hero />
       <About />
       <Skills />
+      <VibeCoding />
+      <SoftSkills />
       <Experience />
       <Projects />
       <OpenSource />

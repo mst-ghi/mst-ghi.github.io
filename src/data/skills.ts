@@ -75,6 +75,32 @@ export const AppSkills: SkillGroup[] = [
       'CI/CD Workflows',
     ],
   },
+  {
+    title: 'Vibe Coding',
+    icon: 'sparkles',
+    accent: 'amber',
+    skills: [
+      'Claude',
+      'Cursor',
+      'Codex',
+      'DeepSeek',
+      'Qwen',
+      'GitHub Spec-Kit',
+      'Knowledge Management',
+    ],
+  },
+  {
+    title: 'Soft Skills',
+    icon: 'users',
+    accent: 'green',
+    skills: [
+      'Technical Communication',
+      'Mentoring',
+      'Ownership',
+      'Problem Solving',
+      'Collaboration',
+    ],
+  },
 ];
 
 // Marquee ticker of core technologies
@@ -99,4 +125,7 @@ export const MarqueeSkills: string[] = [
   'Mantine',
   'Docker',
   'Microservices',
+  'Cursor',
+  'Claude',
+  'Codex',
 ];

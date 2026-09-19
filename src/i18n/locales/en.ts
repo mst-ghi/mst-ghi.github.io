@@ -7,6 +7,8 @@ export const en = {
     home: 'Home',
     about: 'About',
     skills: 'Skills',
+    vibe: 'Vibe',
+    soft: 'Soft Skills',
     experience: 'Experience',
     projects: 'Projects',
     opensource: 'Open Source',
@@ -50,6 +52,72 @@ export const en = {
       'Golang & Cloud': 'Golang & Cloud',
       Frontend: 'Frontend',
       'Architecture & Coding': 'Architecture & Coding',
+      'Vibe Coding': 'Vibe Coding',
+      'Soft Skills': 'Soft Skills',
+    },
+  },
+  vibe: {
+    eyebrow: 'Vibe coding',
+    titleBefore: 'AI-assisted',
+    titleAccent: 'development',
+    sub: 'How I ship faster with agents, specs, and a living knowledge system — the AI-assisted stack from my CV.',
+    items: {
+      claude: {
+        name: 'Claude',
+        desc: 'Planning, long-context reviews, and multi-step agent workflows.',
+      },
+      cursor: {
+        name: 'Cursor',
+        desc: 'Daily IDE pairing for refactors, reviews, and multi-file edits.',
+      },
+      codex: {
+        name: 'Codex',
+        desc: 'Fast scaffolding and targeted generation when the spec is clear.',
+      },
+      deepseek: {
+        name: 'DeepSeek',
+        desc: 'Cost-efficient reasoning for exploration and second opinions.',
+      },
+      qwen: {
+        name: 'Qwen',
+        desc: 'Multilingual and local-model experiments beside the main agents.',
+      },
+      speckit: {
+        name: 'GitHub Spec-Kit',
+        desc: 'Spec-first delivery so implementation starts from a written contract.',
+      },
+      knowledge: {
+        name: 'Knowledge Management',
+        desc: 'Notes, graphs, and reusable context that keep agents grounded.',
+      },
+    },
+  },
+  soft: {
+    eyebrow: 'Soft skills',
+    titleBefore: 'How I',
+    titleAccent: 'work with people',
+    sub: 'The human side of shipping: clear communication, ownership, and raising the bar with the team.',
+    items: {
+      communication: {
+        name: 'Technical Communication',
+        desc: 'Clear write-ups for trade-offs, decisions, and system design.',
+      },
+      mentoring: {
+        name: 'Mentoring',
+        desc: 'Unblocking teammates and lifting the quality of the codebase.',
+      },
+      ownership: {
+        name: 'Ownership',
+        desc: 'End-to-end delivery from architecture through production.',
+      },
+      problemSolving: {
+        name: 'Problem Solving',
+        desc: 'Breaking messy systems into slices that can actually ship.',
+      },
+      collaboration: {
+        name: 'Collaboration',
+        desc: 'Working across product, design, and backend/frontend.',
+      },
     },
   },
   experience: {

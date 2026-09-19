@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import { useI18n } from '@/i18n';
 import { LanguageToggle, ThemeToggle } from '@/components/common';
@@ -9,6 +9,8 @@ import { LanguageToggle, ThemeToggle } from '@/components/common';
 const LINK_HREFS = [
   { key: 'about', href: '#about' },
   { key: 'skills', href: '#skills' },
+  { key: 'vibe', href: '#vibecoding' },
+  { key: 'soft', href: '#softskills' },
   { key: 'experience', href: '#experience' },
   { key: 'projects', href: '#projects' },
   { key: 'opensource', href: '#opensource' },
@@ -21,6 +23,8 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('#about');
+  const [overflow, setOverflow] = useState({ left: false, right: false });
+  const scrollerRef = useRef<HTMLDivElement>(null);
 
   const links = LINK_HREFS.map((link) => ({
     href: link.href,
@@ -51,6 +55,64 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
+  const updateOverflow = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const links = [...el.children];
+    if (!links.length) {
+      setOverflow({ left: false, right: false });
+      return;
+    }
+    const box = el.getBoundingClientRect();
+    const edges = links.map((node) => node.getBoundingClientRect());
+    const minLeft = Math.min(...edges.map((rect) => rect.left));
+    const maxRight = Math.max(...edges.map((rect) => rect.right));
+    setOverflow({
+      left: minLeft < box.left - 2,
+      right: maxRight > box.right + 2,
+    });
+  }, []);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    updateOverflow();
+    el.addEventListener('scroll', updateOverflow, { passive: true });
+    const observer = new ResizeObserver(updateOverflow);
+    observer.observe(el);
+    window.addEventListener('resize', updateOverflow);
+    return () => {
+      el.removeEventListener('scroll', updateOverflow);
+      observer.disconnect();
+      window.removeEventListener('resize', updateOverflow);
+    };
+  }, [updateOverflow, t.nav]);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const onWheel = (event: WheelEvent) => {
+      if (el.scrollWidth <= el.clientWidth) return;
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      event.preventDefault();
+      el.scrollLeft += event.deltaY;
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    const current = el?.querySelector<HTMLElement>('.nav__link.is-active');
+    if (!el || !current) return;
+    const elBox = el.getBoundingClientRect();
+    const linkBox = current.getBoundingClientRect();
+    const delta = linkBox.left + linkBox.width / 2 - (elBox.left + elBox.width / 2);
+    if (Math.abs(delta) > 4) {
+      el.scrollBy({ left: delta, behavior: 'smooth' });
+    }
+  }, [active]);
+
   return (
     <nav className='nav'>
       <div className={`nav__inner ${scrolled ? 'is-scrolled' : ''}`}>
@@ -61,16 +123,20 @@ const Navbar = () => {
           <span>mst-ghi</span>
         </a>
 
-        <div className='nav__links'>
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`nav__link ${active === link.href ? 'is-active' : ''}`}
-            >
-              {link.label}
-            </a>
-          ))}
+        <div
+          className={`nav__scroller${overflow.left ? ' is-overflow-left' : ''}${overflow.right ? ' is-overflow-right' : ''}`}
+        >
+          <div className='nav__links' ref={scrollerRef}>
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`nav__link ${active === link.href ? 'is-active' : ''}`}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className='nav__right'>

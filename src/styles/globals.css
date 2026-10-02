@@ -541,23 +541,23 @@ a {
 .lang-switch {
   display: inline-flex;
   align-items: stretch;
-  min-width: 132px;
+  min-width: 96px;
   overflow: hidden;
-  border-radius: 999px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--surface-2);
 }
 .lang-switch__btn {
   appearance: none;
-  flex: 1 1 66px;
-  min-width: 66px;
+  flex: 1 1 48px;
+  min-width: 48px;
   border: 0;
   background: transparent;
   color: var(--text-faint);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  padding: 9px 20px;
+  padding: 6px 14px;
   cursor: pointer;
   transition:
     background 0.2s var(--ease),
